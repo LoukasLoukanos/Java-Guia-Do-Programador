@@ -18,5 +18,21 @@ public class Pag55_Operadores_Outros {
 		boolean res3 = k != m; // true
 
 		// Operadores lógicos:
+		double k = 1.5, m = -1.9;
+		boolean res0 = (k > 0) && (m < 0); // && → and 
+		boolean res1 = (k == m) || (m > 0); // || → or
+		boolean res2 = !res1; // ! → not
+		boolean res3 = res1 ^ res2; // ^ → xor
+
+		// Operadores de atribuição composta:
+		x = x + 15;
+		y = y - a;
+		total = total * (a / b);
+		// podem ser reescritos resumidamente:
+		x += 15;
+		y -= a;
+		total * = (a / b);
+
+		// Operadores Ternários
 	}
 }
