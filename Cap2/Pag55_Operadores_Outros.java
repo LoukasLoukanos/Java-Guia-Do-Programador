@@ -90,5 +90,52 @@ public class Pag55_Operadores_Outros {
 		 *|______>>______|_Rotação à direita de n bits_________|_____Esquerda______|__a >> n__|
 		 *|______>>>_____|_Rotação à direita sem sinal_________|_____Esquerda______|__a >>> n_|
 		 *|———————————————————————————————————————————————————————————————————————————————————|*/
+        byte w = 0x1F, z = 0x10;
+		System.out.println("Valores w = " + w + ", z = " + z);
+		// w = 1F (Hexadecimal(0x)) = 31 (Decimal) = 37 (Octal) = 0001 1111 (Binário)
+		// z = 10 (Hexadecimal(0x)) = 16 (Decimal) = 20 (Octal) = 0001 0000 (Binário)
+
+		System.out.println(" w & z = " + (w & z)); // output: w & z = 16
+		/* w = 1F = 0001 1111 
+		 * z = 10 = 0001 0000
+		 * w & z => —————————
+		 * w & z => 0001 0000 = (16dec) */
+
+		System.out.println(" w | z = " + (w | z)); // output: w | z = 31
+		/* w = 1F = 0001 1111 
+		 * z = 10 = 0001 0000
+		 * w | z => —————————
+		 * w | z => 0001 1111 = (31dec) */
+
+		System.out.println(" w ^ z = " + (w ^ z)); // output: w ^ z = 15
+		/* w = 1F = 0001 1111 
+		 * z = 10 = 0001 0000
+		 * w ^ z => —————————
+		 * w ^ z => 0000 1111 = (15dec) */
+
+		System.out.println(" ~ z = " + (~ z)); 		// output: ~ z = -17
+
+		System.out.println(" w << 4 = " + (w << 4)); // output: w << 2 = 496
+		/* w = 1F = 0001 1111 
+		 * w << 4 (rotação(deslocamento) de 4 unidades para à esquerda):
+		 * w << 4 = 0001 1111 0000 = (496dec) */
+
+		System.out.println(" -w >> 4 = " + (-w >> 4)); // output: -w >> 4 = -2
+		/* primeiro resolve-se a rotação(deslocamento) de 4 unidades para à direita:
+		 * w = 31 = 0001 1111
+		 * w >> 4 = 0000 0001 , 1111 (pós vírgula imaginária é cancelado)
+		 * w >> 4 = 0000 0001
+		 * 
+		 * depois deixa-se o binário negativo
+		 *-(w >> 4) = 1111 1110 = -2(dec) */
+		 
+		System.out.println(" -w >>> 4 = " + (-w >>> 4)); // output: -w >>> 4 = 268435454
+		/* w = -31 = 0001 1111
+		 *-w = -31 =(1110 1111)+(1) = 1111 0000  
+		 * w >>> 4 (rotação de 4 primeiros (1111) no lugar dos zeros (0000) à direita):
+		 * w >>> 4 = 1111 1111 1111 1111 1111 1111 1110 = (268435454dec)
+		 * -w >> 4 = (-2dec) */ 
+
 	}
 }
+
