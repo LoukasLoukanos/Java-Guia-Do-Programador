@@ -95,47 +95,63 @@ public class Pag55_Operadores_Outros {
 		// w = 1F (Hexadecimal(0x)) = 31 (Decimal) = 37 (Octal) = 0001 1111 (Binário)
 		// z = 10 (Hexadecimal(0x)) = 16 (Decimal) = 20 (Octal) = 0001 0000 (Binário)
 
-		System.out.println(" w & z = " + (w & z)); // output: w & z = 16
+		System.out.println("(w & z): Decimal = " + (w & z) + " ou Binário = " + Integer.toBinaryString(w & z)); // output: Decimal = 16 ou Binário = 10000
 		/* w = 1F = 0001 1111 
 		 * z = 10 = 0001 0000
 		 * w & z => —————————
 		 * w & z => 0001 0000 = (16dec) */
 
-		System.out.println(" w | z = " + (w | z)); // output: w | z = 31
+		System.out.println("(w | z): Decimal = " + (w | z) + " ou Binário = " + Integer.toBinaryString(w | z)); // output: Decimal = 31 ou Binário = 11111
 		/* w = 1F = 0001 1111 
 		 * z = 10 = 0001 0000
 		 * w | z => —————————
 		 * w | z => 0001 1111 = (31dec) */
 
-		System.out.println(" w ^ z = " + (w ^ z)); // output: w ^ z = 15
+		System.out.println("(w ^ z): Decimal = " + (w ^ z) + " ou Binário = " + Integer.toBinaryString(w ^ z)); // output: Decimal = 15 ou Binário = 1111
 		/* w = 1F = 0001 1111 
 		 * z = 10 = 0001 0000
 		 * w ^ z => —————————
 		 * w ^ z => 0000 1111 = (15dec) */
+	
+		System.out.println("(~ z): Decimal = " + (~ z) + " ou Binário = " + Integer.toBinaryString(~ z)); // output: Decimal = -17 ou Binário = 11111111111111111111111111101111
+		/* z = 16dec = 0001 0000
+		 *~z = -z +1 → (complemento de 1(-)) + (1) = (complemento de 2(~))
+		 *-z = 1110 1111 → (complemento de 1(-))
+		 *~z = 1110 1111 +1 = 1111 0000 = -16 → (complemento de 2(~)) 
+		 * o resultado é -16, porém o retorno é -17. */
 
-		System.out.println(" ~ z = " + (~ z)); 		// output: ~ z = -17
+		System.out.println("(~ w): Decimal = " + (~ w) + " ou Binário = " + Integer.toBinaryString(~ w)); // output: Decimal = -32 ou Binário = 11111111111111111111111111100000
+		/* w = 31dec = 0001 1111
+		 *~w = -w +1 → (complemento de 1(-)) + (1) = (complemento de 2(~))
+		 *-w = 1110 0000 → (complemento de 1(-))
+		 *~w = 1110 0000 +1 = 1110 0001 = -31 → (complemento de 2(~))
+		 * o resultado é -31, porém o retorno é -32. */
 
-		System.out.println(" w << 4 = " + (w << 4)); // output: w << 2 = 496
-		/* w = 1F = 0001 1111 
-		 * w << 4 (rotação(deslocamento) de 4 unidades para à esquerda):
-		 * w << 4 = 0001 1111 0000 = (496dec) */
+		System.out.println("(w >> 4): Decimal = " + (w >> 4) + " ou Binário = " + Integer.toBinaryString(w >> 4)); // output: Decimal = 1 ou Binário = 1
+		/* → Rotação de 4 unidades(binárias) para à direita OU divisão por 2(ao decimal) 4vezes:
+		 * w = +31 = 0001 1111 ,
+		 * w >> 4 = 0000 0001 , 1111 = 0000 0001 = (1dec) → Rotação de 4 unidades(binárias) para à direita
+		 * OU
+		 * w >> 4 = 31/2/2/2/2 = (1dec) → divisão por 2(ao decimal) 4vezes*/
 
-		System.out.println(" -w >> 4 = " + (-w >> 4)); // output: -w >> 4 = -2
-		/* primeiro resolve-se a rotação(deslocamento) de 4 unidades para à direita:
-		 * w = 31 = 0001 1111
-		 * w >> 4 = 0000 0001 , 1111 (pós vírgula imaginária é cancelado)
-		 * w >> 4 = 0000 0001
-		 * 
-		 * depois deixa-se o binário negativo
-		 *-(w >> 4) = 1111 1110 = -2(dec) */
-		 
-		System.out.println(" -w >>> 4 = " + (-w >>> 4)); // output: -w >>> 4 = 268435454
-		/* w = -31 = 0001 1111
-		 *-w = -31 =(1110 1111)+(1) = 1111 0000  
-		 * w >>> 4 (rotação de 4 primeiros (1111) no lugar dos zeros (0000) à direita):
-		 * w >>> 4 = 1111 1111 1111 1111 1111 1111 1110 = (268435454dec)
-		 * -w >> 4 = (-2dec) */ 
+		System.out.println("(w << 4): Decimal = " + (w << 4) + " ou Binário = " + Integer.toBinaryString(w << 4)); // output: Decimal = 496 ou Binário = 111110000
+		/* → Rotação de 4 unidades(binárias) para à esquerda OU multiplicação por 2(ao decimal) 4vezes:
+		 * w = +31 = 0001 1111 ,
+		 * w << 4 = 0001 1111 0000 , = (496dec) → Rotação de 4 unidades(binárias) para à esquerda
+		 * OU
+		 * w << 4 = 31*2*2*2*2 = (496dec) → multiplicação por 2(ao decimal) 4vezes*/
 
+		System.out.println("(-w >> 4): Decimal = " + (-w >> 4) + " ou Binário = " + Integer.toBinaryString(-w >> 4)); // output: Decimal = -2 ou Binário = 11111111111111111111111111111110
+		/* → Rotação de 4 unidades(binárias) para à direita OU divisão por 2(ao decimal) 4vezes:
+		 *-w >> 4 = -31/2/2/2/2 = -1,9375 ≅ (-2dec) → divisão por 2(ao decimal) 4vezes
+		 */
+
+		System.out.println("(-w << 4): Decimal = " + (-w << 4) + " ou Binário = " + Integer.toBinaryString(-w << 4)); // output: -496 ou Binário = 11111111111111111111111000010000
+		/* → Rotação de 4 unidades(binárias) para à esquerda OU multiplicação por 2(ao decimal) 4vezes:
+		 *-w << 4 = -31*2*2*2*2 = (-496dec) → multiplicação por 2(ao decimal) 4vezes
+		 */
+
+		System.out.println("(-w >>> 4): Decimal = " + (-w >>> 4) + " ou Binário = " + Integer.toBinaryString(-w >>> 4)); // output: Decimal = 268435454 ou Binário = 111111111111111111111111111
 	}
 }
 
