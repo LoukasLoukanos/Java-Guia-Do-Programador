@@ -18,8 +18,7 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 		 
 		//Aplicação com teste convencional(sem controle de erros com a diretiva try catch)
 		if (args.length > 0) { // testa presença de argumentos
-			// converte 1o argumento em inteiro
-			int j = Integer.parseInt(args[0]);
+			int j = Integer.parseInt(args[0]); // converte 1o argumento em inteiro
 			while (j >= 0) {
 				System.out.println(j);
 				j--;
@@ -31,8 +30,7 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 
 		//Aplicação com uso de controle de erros com a diretiva try catch)
 		try { // Tentativa
-			// converter 1o argumento em inteiro
-			int i = Integer.parseInt(args[0]);
+			int i = Integer.parseInt(args[0]); // converte 1o argumento em inteiro
 			while (i >= 0) {
 				System.out.println(i); 
 				i--;
@@ -44,8 +42,7 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 
 		//Usando várias cláusulas catch
 		try { // Tentativa
-			// converte 1o argumento em inteiro
-			int j = Integer.parseInt(args[0]);
+			int j = Integer.parseInt(args[0]); // converte 1o argumento em inteiro
 			while (j >= 0) {
 				System.out.println(j);
 				j--;
@@ -60,13 +57,12 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 
         // Capturar várias exceções diferrentes em uma única clausula multi-catch com o uso de → |
 		try { // Tentativa
-			// converte 1o argumento em inteiro
-			int j = Integer.parseInt(args[0]);
+			int j = Integer.parseInt(args[0]); // converte 1o argumento em inteiro
 			while (j >= 0) {
 				System.out.println(j);
 				j--;
 			}
-		} catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {  // Captura dois erros através do uso do multi-catch → |: o erro de falta de argumentos e de argumento inadequado
+		} catch (ArrayIndexOutOfBoundsException | NumberFormatException e) { // Captura dois erros através do uso do multi-catch → |: o erro de falta de argumentos e de argumento inadequado
 			System.out.println("Argumento nao fornecido ou invalido.");
 		} 
 	}
