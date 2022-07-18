@@ -30,15 +30,44 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 
 
 		//Aplicação com uso de controle de erros com a diretiva try catch)
-		try { // monitora eventuais problemas
+		try { // Tentativa
 			// converter 1o argumento em inteiro
 			int i = Integer.parseInt(args[0]);
 			while (i >= 0) {
 				System.out.println(i); 
 				i--;
 			}
-		} catch (Exception e) { // sinaliza problemas encontrados. com o uso de Exception será tratado qualquer tipo de erro.
+		} catch (Exception e) { // sinaliza problemas encontrados. Com o uso de Exception será tratado qualquer tipo de erro.
 			System.out.println("Argumento nao foi dado ou nao e inteiro.");
 		}
+
+
+		//Usando várias cláusulas catch
+		try { // Tentativa
+			// converte 1o argumento em inteiro
+			int j = Integer.parseInt(args[0]);
+			while (j >= 0) {
+				System.out.println(j);
+				j--;
+			}
+		} catch (ArrayIndexOutOfBoundsException e1) {// Captura o erro de falta de argumentos
+			System.out.println("Nao foi fornecido um argumento.");
+
+		} catch (NumberFormatException e2) { // Captura o erro de argumento inadequado
+			System.out.println("Argumento nao e um inteiro.");
+		}
+
+
+        // Capturar várias exceções diferrentes em uma única clausula multi-catch com o uso de → |
+		try { // Tentativa
+			// converte 1o argumento em inteiro
+			int j = Integer.parseInt(args[0]);
+			while (j >= 0) {
+				System.out.println(j);
+				j--;
+			}
+		} catch (ArrayIndexOutOfBoundsException | NumberFormatException e) {  // Captura dois erros através do uso do multi-catch → |: o erro de falta de argumentos e de argumento inadequado
+			System.out.println("Argumento nao fornecido ou invalido.");
+		} 
 	}
 }
