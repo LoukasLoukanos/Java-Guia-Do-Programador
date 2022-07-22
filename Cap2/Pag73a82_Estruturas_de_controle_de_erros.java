@@ -65,5 +65,23 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 		} catch (ArrayIndexOutOfBoundsException | NumberFormatException e) { // Captura dois erros através do uso do multi-catch → |: o erro de falta de argumentos e de argumento inadequado
 			System.out.println("Argumento nao fornecido ou invalido.");
 		} 
+
+
+		// Gerando um trexo final sempre executável diante da diretiva catch, através da cláusula finaly.
+		int p = 5; // valor default
+		try { // Tentativa
+			p = Integer.parseInt(args[0]);
+		} catch (Exception e) { // sinaliza problema com conversão
+			System.out.println("Argumento invalido ou ausente. Usando default.");
+		} finally { // execução de um trecho final de código com a cláusula finaly, independente execução da diretiva catch
+			while (p >= 0) {	
+				System.out.println(p);
+				p--;
+			}
+		}
+
+
+		//
+
 	}
 }
