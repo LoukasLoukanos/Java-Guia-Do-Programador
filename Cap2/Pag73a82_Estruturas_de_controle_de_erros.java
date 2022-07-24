@@ -7,7 +7,6 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 	 	 * •Bloco (blocks): → Grupo de diretivas/declarações (statements)
 		 * •Cláusula (Clause): → Procedimento nativo da liguagem
 		 * 
-		 * 
 		 * ♦Controle de erros com as cláusulas try catch finally e assert
 		 * Sintaxe:
 		 * 	try [(recurso = inicialização)] {
