@@ -3,9 +3,9 @@ public class Pag62_Diretiva_While_e_DoWhile {
 	@SuppressWarnings("resource")
 	public static void main (String args[]) {
 
-		/* •Diretiva/declaração (Statement): → Instrução do programa (em Java são separadas por ;)
+		/* •Diretiva/declaração (Statement): → Instrução (em Java são separadas por ;)
 	 	 * •Bloco (blocks): → Grupo de diretivas/declarações (statements)
-		 * •Cláusula (Clause): → Procedimento nativo da liguagem
+		 * •Cláusula (Clause): → Procedimento
 	 	 * 
 	 	 * ESTRUTURAS DE CONTROLE: 
 	 	 * •1°-Estrutura de Repetição Simples: Cláusula for simples e Cláusula for avançada
