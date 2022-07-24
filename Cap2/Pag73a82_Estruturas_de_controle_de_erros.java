@@ -106,8 +106,9 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 			} catch (IOException e2) {} // ♦captura o erro da tentativa
 		} //Exemplo 1 - FIM_______________________________________________________________________________________________________
 
-		// Exemplo 2 - de código mais legível COM uso do recurso try-com-recurso——————————————————————————————————————————————————
-		// Realização monitorada da operação close(), para 'recurso_try_com_recurso', SEM finally e SEM if: ↓↓↓
+		/* Exemplo 2 - de código mais legível COM uso do recurso try-com-recurso——————————————————————————————————————————————————
+		 * Realização monitorada da operação close(), para 'recurso_try_com_recurso', SEM finally e SEM if. O uso da sintaxe 
+		 * try-com-recurso remove a necessidade de utilizar a cláusula finally, contendo testes e fechamento dos recursos↓↓↓ */
 		try (InputStream recurso_try_com_recurso = new FileInputStream(args[0]);) { // ♦tentativa COM uso do recurso try-com-recurso
 			System.out.println("Arquivo " + args[0] + " aberto.");
 		} catch (IOException e1) { // ♦captura o erro da tentativa
@@ -115,5 +116,24 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 		}
 		System.out.println("Arquivo " + args[0] + " fechado.");
 		//Exemplo 2 - FIM_________________________________________________________________________________________________________
+
+
+	/*  Simplificação no uso do ARM Automatic Resource Management (ARM) ou try-com-recursos (try-with-resources):
+	 * → melhora a legibiilidade do try-com-recursos, declarando-se o recurso antes de usá-lo em try-com-recursos.  */
+		String s = "Java - Guia do Programador, 4a Ed.";
+		processaRecurso(s);
+	} // fim do método construtor — main —
+	public static void processaRecurso(String s) {
+		StringReader recurso = new StringReader(s); // o objeto 'recurso' do tipo StringReader, é declarado e instanciado antes
+		try (recurso) { // ♦tentativa COM uso do recurso try-com-recurso
+			int espacos = 0, c;
+			while ((c = recurso.read()) != -1) {
+				if (c == 32) espacos++;
+			}
+			System.out.println("Espacos = " + espacos);
+		} catch (IOException e1) { // ♦captura o erro da tentativa
+			System.out.println(e1);
+		}
+		System.out.println("Recurso processado.");
 	}
 }
