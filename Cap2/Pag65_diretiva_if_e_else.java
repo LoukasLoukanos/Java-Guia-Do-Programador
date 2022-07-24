@@ -1,18 +1,19 @@
 public class Pag65_diretiva_if_e_else {
 	public static void main (String args[]) {
 
-		/* •Diretivas(Statements): → São as instruções do programa, em Java são separadas por ;
-	 	 * •Bloco: → São grupos de Diretivas(Statements)
+		/* •Diretiva/declaração (Statement): → Instrução do programa (em Java são separadas por ;)
+	 	 * •Bloco (blocks): → Grupo de diretivas/declarações (statements)
+		 * •Cláusula (Clause): → Procedimento nativo da liguagem
 	 	 * 
 	 	 * ESTRUTURAS DE CONTROLE: 
-	 	 * •1°-Estrutura de Repetição Simples: diretiva for simples e diretiva for avançada
-	 	 * •2°-Estrutura de Repetição Condicionais: diretiva while e diretiva do while
-	 	 * •3°-Estrutura de Desvio de Fluxo Condicional Simples: diretiva if e diretiva else
-		 * •4°-Estrutura de Desvio de Fluxo Condicional Múltiplo: diretiva switch
-		 * •5°-Estrutura de Desvio de Fluxo Incondicional: diretiva break e diretiva continue */
+	 	 * •1°-Estrutura de Repetição Simples: Cláusula for simples e Cláusula for avançada
+	 	 * •2°-Estrutura de Repetição Condicionais: Cláusula while e Cláusula do while
+	 	 * •3°-Estrutura de Desvio de Fluxo Condicional Simples: Cláusula if e Cláusula else
+		 * •4°-Estrutura de Desvio de Fluxo Condicional Múltiplo: Cláusula switch
+		 * •5°-Estrutura de Desvio de Fluxo Incondicional: Cláusula break e Cláusula continue */
 
 
-		/* 3°-Estrutura de Desvio de Fluxo Condicional Simples: Diretiva(Statement) if e else_________________________________________________________
+		/* 3°-Estrutura de Desvio de Fluxo Condicional Simples: Cláusula (Clause) if e else_________________________________________________________
 		 * Semântica:
 		 * if ( < condição > )
 		 * 	< diretiva1; ou { bloco1 }>
@@ -21,7 +22,7 @@ public class Pag65_diretiva_if_e_else {
 		 * OBS: A sintaxe Java determina que uma cláusula else sempre pertence à diretiva if imediatamente anterior.
 		 * O uso de chaves{} permite modificar esta regra: */
 		
-		// Exemplo: Diretiva(Statement) if e else:
+		// Exemplo: Cláusula (Clause) if e else:
 		int a = 80, b = 50;
 		if (a > b) { // condição1 → se a chave fosse após a condição2 então else seria pertencente à diretiva if da condição2
 			if (a > 80) // condição2
@@ -30,7 +31,7 @@ public class Pag65_diretiva_if_e_else {
 			System.out.println("a < b"); // diretiva2
 		}
 
-		// Exemplo: Diretiva(Statement) if e else:
+		// Exemplo: Cláusula (Clause) if e else:
 		if (args.length > 0) { // testa presença de argumentos
 			// converte 1o argumento para inteiro
 			int max = Integer.parseInt(args[0]);

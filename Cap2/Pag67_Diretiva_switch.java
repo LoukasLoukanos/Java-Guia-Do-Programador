@@ -10,18 +10,19 @@ import java.util.Scanner;
 public class Pag67_Diretiva_switch {
 	public static void main (String args[]) {
 
-		/* •Diretivas(Statements): → São as instruções do programa, em Java são separadas por ;
-	 	 * •Bloco: → São grupos de Diretivas(Statements)
+		/* •Diretiva/declaração (Statement): → Instrução do programa (em Java são separadas por ;)
+	 	 * •Bloco (blocks): → Grupo de diretivas/declarações (statements)
+		 * •Cláusula (Clause): → Procedimento nativo da liguagem
 	 	 * 
 	 	 * ESTRUTURAS DE CONTROLE: 
-	 	 * •1°-Estrutura de Repetição Simples: diretiva for simples e diretiva for avançada
-	 	 * •2°-Estrutura de Repetição Condicionais: diretiva while e diretiva do while
-	 	 * •3°-Estrutura de Desvio de Fluxo Condicional Simples: diretiva if e diretiva else
-		 * •4°-Estrutura de Desvio de Fluxo Condicional Múltiplo: diretiva switch
-		 * •5°-Estrutura de Desvio de Fluxo Incondicional: diretiva break e diretiva continue */
+	 	 * •1°-Estrutura de Repetição Simples: Cláusula for simples e Cláusula for avançada
+	 	 * •2°-Estrutura de Repetição Condicionais: Cláusula while e Cláusula do while
+	 	 * •3°-Estrutura de Desvio de Fluxo Condicional Simples: Cláusula if e Cláusula else
+		 * •4°-Estrutura de Desvio de Fluxo Condicional Múltiplo: Cláusula switch
+		 * •5°-Estrutura de Desvio de Fluxo Incondicional: Cláusula break e Cláusula continue */
 
 
-		/* •4°-Estrutura de Desvio de Fluxo Condicional Múltiplo: diretiva (Statement) switch_________________________________________________________
+		/* •4°-Estrutura de Desvio de Fluxo Condicional Múltiplo: Cláusula (Clause) switch_________________________________________________________
 		 * Semântica:
 		 * switch ( <expressão_ordinal ou condição> ) {
 		 *	case <ordinal1/condição1>:
@@ -36,7 +37,7 @@ public class Pag67_Diretiva_switch {
 		 * → Expressões ordinais: (0, 1, 2, 3,...); ('A', 'B', 'C')*/
 		
 		 
-		// 1° exemplo: Diretiva(Statement) switch com um caractere de argumento:________________
+		// 1° exemplo: Cláusula (Clause) switch com um caractere de argumento:________________
 		if (args.length > 0) { // testa presença de argumentos
 			switch(args[0].charAt(0)) { // avalia inicial do 1o argumento
 				// argumento com inicial a minúscula ou maiúscula
@@ -63,7 +64,7 @@ public class Pag67_Diretiva_switch {
 		}
 
 
-		// 2° exemplo: Diretiva(Statement) switch com String de argumento:_______________________
+		// 2° exemplo: Cláusula (Clause) switch com String de argumento:_______________________
 		if (args.length > 0) { // testa presença de argumentos
 			switch(args[0].toLowerCase()) { // o argumento args[] do tipo string é convertido em minúsculas por meio do método toLowerCase()
 				case "data":
@@ -86,7 +87,7 @@ public class Pag67_Diretiva_switch {
 		}
 
 
-		// 3° exemplo: Diretiva(Statement) switch como expressão (preview feature) com o uso do operador lambda ->:_______________________
+		// 3° exemplo: Cláusula (Clause) switch como expressão (preview feature) com o uso do operador lambda ->:_______________________
 		Scanner s = new Scanner(System.in); // Prepara entrada de dados criando o objeto leitor s para uso das ENTRADAS FORMATADAS (Pag45_EntradaFormatada)
 		System.out.print("Digite no. do mes [1-12]? ");
 		int mes = s.nextInt();
