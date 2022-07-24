@@ -1,7 +1,14 @@
+import java.io.*; // linha 91
+
 public class Pag73a82_Estruturas_de_controle_de_erros {
 	public static void main (String args[]) {
 
-		/* Controle de erros com try catch finally e assert
+		/* •Diretiva/declaração (Statement): → Instrução do programa (em Java são separadas por ;)
+	 	 * •Bloco (blocks): → Grupo de diretivas/declarações (statements)
+		 * •Cláusula (Clause): → Procedimento nativo da liguagem
+		 * 
+		 * 
+		 * ♦Controle de erros com as cláusulas try catch finally e assert
 		 * Sintaxe:
 		 * 	try [(recurso = inicialização)] {
 		 *		diretivas;
@@ -13,7 +20,7 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 		 *		diretiva_de_execução_garantida;
 		 * }]
 		 *
-		 * obs:a cláusula finaly garante a execução de um trecho final de código. */
+		 * obs: a cláusula finaly garante a execução de um trecho final de código. */
 
 		 
 		//Aplicação com teste convencional(sem controle de erros com a diretiva try catch)
@@ -71,7 +78,7 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 		int p = 5; // valor default
 		try { // Tentativa
 			p = Integer.parseInt(args[0]);
-		} catch (Exception e) { // sinaliza problema com conversão
+		} catch (Exception e) { // sinaliza problemas encontrados. Com o uso de Exception será tratado qualquer tipo de erro.
 			System.out.println("Argumento invalido ou ausente. Usando default.");
 		} finally { // execução de um trecho final de código com a cláusula finaly, independente execução da diretiva catch
 			while (p >= 0) {	
@@ -81,7 +88,33 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 		}
 
 
-		//
+		/* try catch para realização monitorada da operação close(), para 'recurso_try_sem_recurso', utilizando a cláusula finally 
+		 * com a estrutura de desvio de fluxo condicional simples, cláusula (Clause) if - (Pag65_.java...).  Se mostra uma tarefa 
+		 * repetitiva cujo código resultante é pouco legível. A solução, para um código mais legível, é fazer uso do Automatic
+		 * Resource Management (ARM) ou try-com-recursos (try-with-resources), abaixo ↓↓↓. */
+		// Exemplo 1 - de código pouco legível SEM uso do recurso try-com-recurso—————————————————————————————————————————————————
+		InputStream recurso_try_sem_recurso = null;
+		try { // ♦tentativa SEM uso do recurso try-com-recurso
+			recurso_try_sem_recurso = new FileInputStream(args[0]); 
+			System.out.println("Arquivo " + args[0] + " aberto.");
+		} catch (IOException e1) { // ♦captura o erro da tentativa
+			System.out.println(e1); 
+		// Realização monitorada da operação close(), para 'recurso_try_sem_recurso', COM finally e COM if: ↓↓↓
+		} finally {
+			if (recurso_try_sem_recurso != null) try { // ♦tentativa SEM uso do recurso try-com-recurso
+				recurso_try_sem_recurso.close();
+				System.out.println("Arquivo " + args[0] + " fechado.");
+			} catch (IOException e2) {} // ♦captura o erro da tentativa
+		} //Exemplo 1 - FIM_______________________________________________________________________________________________________
 
+		// Exemplo 2 - de código mais legível COM uso do recurso try-com-recurso——————————————————————————————————————————————————
+		// Realização monitorada da operação close(), para 'recurso_try_com_recurso', SEM finally e SEM if: ↓↓↓
+		try (InputStream recurso_try_com_recurso = new FileInputStream(args[0]);) { // ♦tentativa COM uso do recurso try-com-recurso
+			System.out.println("Arquivo " + args[0] + " aberto.");
+		} catch (IOException e1) { // ♦captura o erro da tentativa
+			System.out.println(e1);
+		}
+		System.out.println("Arquivo " + args[0] + " fechado.");
+		//Exemplo 2 - FIM_________________________________________________________________________________________________________
 	}
 }
