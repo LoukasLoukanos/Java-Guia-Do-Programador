@@ -1,4 +1,5 @@
-import java.io.*; // linha 91
+import java.io.*; // linha 
+import java.util.Scanner; // linha 91
 
 public class Pag73a82_Estruturas_de_controle_de_erros {
 	public static void main (String args[]) {
@@ -85,6 +86,31 @@ public class Pag73a82_Estruturas_de_controle_de_erros {
 				p--;
 			}
 		}
+
+
+		/* Uma asserção torna possível saber de uma situação de que não deveria ocontecer. Funciona como um teste para o código:
+		 * caso a condição avaliada da asserção seja verdadeira, o programa ignora a asserção, mas caso seja falso será lançada a
+		 * exceção do tipo AssertioinError.
+		 * 
+		 * •As asserções precisam ser habilitadas:
+		 * > java -ea NomeArquivo // sem a extenção .java
+		 * --------ou--------
+		 * > java -enableassertions NomeArquivo // sem a extenção .java
+		 * •Para desabilitá-las:
+		 * > java -da NomeArquivo // sem a extenção .java
+		 * --------ou--------
+		 * > java -disableassertions NomeArquivo // sem a extenção .java */
+		Scanner sc = new Scanner(System.in); // cria leitor de dados
+		System.out.print("Forneca inteiro>9: ");
+		int valor = sc.nextInt(); // lê valor inteiro
+		assert valor>9;	// caso o valor da asserção seja menor que 9 será lançada a exceção do tipo AssertioinError
+		int soma=0;		// declara variável para soma
+		for (int i=1; i<valor; i++) { // realiza laço para efetuar soma
+			soma+=i;
+			assert soma<99: "soma(" + soma + ")>=99"; // esperado soma<99
+		}
+		System.out.println("soma[1.."+ valor + "] = " + soma);
+		sc.close(); 
 
 
 		/* try catch para realização monitorada da operação close(), para 'recurso_try_sem_recurso', utilizando a cláusula finally 
