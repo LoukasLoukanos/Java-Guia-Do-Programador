@@ -13,18 +13,21 @@ public class Pag83a90_Arranjos_e_Matrizes {
 		 * 
 		 * •Declaração com alocação:
 		 * → <Tipo> identificador[] = new <Tipo> [tamanho];
-		 * → <Tipo>[] identificador = new <Tipo> [tamanho]; // forma preferencial */
+		 * → <Tipo>[] identificador = new <Tipo> [tamanho]; // forma preferencial 
+		 * 
+		 * ♦ São criadas e preenchidas com valores nulos: 0 (zero) para tipos numéricos; false para tipo booleano; null para tipo objeto 
+		 * ♦ Exceção ArrayIndexOutOfBoundsException quando empregados índices inválidos (negativos ou maiores que length-1) */
 
 
 		// uso da diretiva for comum com arranjos_______________________________________________________________________
 		int a[] = new int[10]; // declara e aloca arranjo inteiro
 		Scanner sc = new Scanner(System.in); 
-		for (int i=0; i<a.length; i++) { // laço for comum destinado ao preenchimento de arranjo (comparação linha 64)
+		for (int i=0; i<a.length; i++) { // laço for comum destinado ao preenchimento de arranjo (comparação linha 67)
 			System.out.print("a[" + i + "]? ");
 			a[i] = sc.nextInt();
 		}
 		int soma = 0; 
-		for (int i=0; i<a.length; i++) { // laço for comum destinado a exibição de arranjo (comparação linha 48)
+		for (int i=0; i<a.length; i++) { // laço for comum destinado a exibição de arranjo (comparação linha 51)
 			System.out.println("a[" + i + "] = "+ a[i]);
 			soma += a[i];
 		}
@@ -38,14 +41,14 @@ public class Pag83a90_Arranjos_e_Matrizes {
 		int tamanho = sc2.nextInt();
 		assert tamanho>0; // uso de assert → pág 81
 		int arranjo[] = new int[tamanho]; // declara e aloca arranjo inteiro
-		for (int i=0; i<tamanho; i++) {  // laço for comum destinado ao preenchimento de arranjo (comparação linha 64)
+		for (int i=0; i<tamanho; i++) {  // laço for comum destinado ao preenchimento de arranjo (comparação linha 67)
 			System.out.print("Elemento["+ i + "]? ");
 			arranjo[i] = sc2.nextInt();
 		}
 		sc2.close();
 		int soma2 = 0;
 		System.out.print("[ ");
-		for (int elemento: arranjo) { // laço for avançado destinado a exibição de arranjo (comparação linha 27)
+		for (int elemento: arranjo) { // laço for avançado destinado a exibição de arranjo (comparação linha 30)
 			soma2 += elemento; 
 			System.out.print(elemento + " ");
 		}
@@ -61,7 +64,7 @@ public class Pag83a90_Arranjos_e_Matrizes {
 		double valor = sc3.nextDouble();
 
 		double arranjo1[] = new double[tamanho_arranjo];
-		Arrays.fill(arranjo1, valor); // o método fill da classe Arrays preenche o arranjo → substitui um laço comum destinado ao preenchimento como o da linha 22 e da linha 41
+		Arrays.fill(arranjo1, valor); // o método fill da classe Arrays preenche o arranjo → substitui um laço comum destinado ao preenchimento como o da linha 25 e da linha 44
 		
 		System.out.println(Arrays.toString(arranjo1)); // o método toString da classe Arrays exibe o arranjo 
 		
@@ -91,7 +94,10 @@ public class Pag83a90_Arranjos_e_Matrizes {
 		 * 
 		 * •Declaração com alocação:
 		 * → <Tipo> identificador[][]...[] = new <Tipo> [dimensão_1][dimensão_2]...[dimensão_N];
-		 * → <Tipo>[][]...[] identificador = new <Tipo> [dimensão_1][dimensão_2]...[dimensão_N]; // forma preferencial */
+		 * → <Tipo>[][]...[] identificador = new <Tipo> [dimensão_1][dimensão_2]...[dimensão_N]; // forma preferencial 
+		 * 
+		 * ♦ São criadas e preenchidas com valores nulos: 0 (zero) para tipos numéricos; false para tipo booleano; null para tipo objeto
+		 * ♦ Exceção ArrayIndexOutOfBoundsException quando empregados índices inválidos (negativos ou maiores que length-1) */
 		
 		
 		// Declaração e uso de matriz comum_____________________________________________________________________________
