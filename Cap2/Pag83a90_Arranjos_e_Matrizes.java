@@ -52,7 +52,7 @@ public class Pag83a90_Arranjos_e_Matrizes {
 		System.out.println("] soma2 = " + soma2);
 
 
-		// Operações com arranjos_______________________________________________________________________________________
+		// Operações com arranjos (classe Arrays)_______________________________________________________________________
 		Scanner sc3 = new Scanner(System.in);
 		System.out.print("No de elementos ? ");
 		int tamanho_arranjo = sc3.nextInt();
@@ -76,5 +76,52 @@ public class Pag83a90_Arranjos_e_Matrizes {
 		System.out.println("Copia parcial:\n" + Arrays.toString(arranjo2)); // o método toString da classe Arrays exibe o arranjo 
 		System.out.println("Copia total:\n" + Arrays.toString(arranjo3)); // o método toString da classe Arrays exibe o arranjo 
 		sc3.close();
+
+		double arr1[] = {13.5, -1.4, 327, 0, 12, 3};
+		double arr2[] = Arrays.copyOf(arr1, arr1.length); // cópia do arr1 para mantê-lo inalterável (pois o método sort, abaixo↓, faz com que os elementos do arranjo sejam reposicionados)
+		Arrays.sort(arr2); // o método sort da classe Arrays faz a ordenação do argumento arranjo, utilizando internamente o algoritmo QuickSort (o mais rápido conhecido para ordenação, portanto o mais indicado)
+
+		/* Matrizes———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+		 * •Declaração:
+		 * → <Tipo> identificador[][]...[]; // forma comum
+		 * → <Tipo>[][]...[] identificador; // forma preferencial
+		 * 
+		 * •Alocação:
+		 * → identificador = new <Tipo> [dimensão_1][dimensão_2]...[dimensão_N]; 
+		 * 
+		 * •Declaração com alocação:
+		 * → <Tipo> identificador[][]...[] = new <Tipo> [dimensão_1][dimensão_2]...[dimensão_N];
+		 * → <Tipo>[][]...[] identificador = new <Tipo> [dimensão_1][dimensão_2]...[dimensão_N]; // forma preferencial */
+		
+		
+		// Declaração e uso de matriz comum_____________________________________________________________________________
+		double mb[][] = new double[3][4]; // declara e aloca matriz 3x4
+		for (int l=0; l<mb.length; l++) { // mb.length faz a leitura da quantidade de linhas
+			for (int c=0; c<mb[l].length; c++) { // mb[l].length faz a leitura da quantidade de colunas da linha l
+				mb[l][c] = l*mb[l].length + c; // aloca o valor da operação na coluna c da linha l na matriz mb
+		}	}
+		for (int l=0; l<mb.length; l++) { // mb.length faz a leitura da quantidade de linhas
+			for (int c=0; c<mb[l].length; c++) { // mb[l].length faz a leitura da quantidade de colunas da linha l
+				System.out.print(mb[l][c] + "\t"); // exibe cada elemento referente a cada coluna de cada linha da matriz
+			}
+			System.out.println();
+		}
+	
+
+		// Declaração e uso de matriz triangular_______________________________________________________________________
+		double mt[][]; // declara matriz
+		mt = new double[4][]; // aloca matriz parcialmente
+		int aux = 0; // variável auxiliar
+		for (int l=0; l<mt.length; l++) { // mt.length faz a leitura da quantidade de linhas
+			mt[l] = new double[l+1]; // completa alocação
+			for (int c=0; c<mt[l].length; c++) { // mt[l].length faz a leitura da quantidade de colunas da linha l
+				mt[l][c] = aux++; // aloca aux na coluna c da linha l na matriz mt
+		}	}
+		for (int l=0; l<mt.length; l++) { // exibe matriz
+			for (int c=0; c<mt[l].length; c++) {
+				System.out.print(mt[l][c] + "\t");
+			}
+			System.out.println();
+		}
 	}
 }
