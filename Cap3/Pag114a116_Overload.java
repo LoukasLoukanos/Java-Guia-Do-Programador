@@ -1,3 +1,5 @@
+//overload ou sobrecarga de método: mudança da assinatura do método.
+//override ou sobreposição de método: mudança do corpo do método.
 public class Pag114a116_Overload {
 	// campos públicos: não existem restrições p/ valores de x e y
 	public double x, y;
