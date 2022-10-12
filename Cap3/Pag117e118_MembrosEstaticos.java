@@ -27,6 +27,6 @@ public class Pag117e118_MembrosEstaticos {
 
 	//uso do método estático getInstancias() a partir de uma instância de sua classe 
 	Pag117e118_MembrosEstaticos obj = new Pag117e118_MembrosEstaticos();
-	int y = obj.getInstancias();
+	//int y = obj.getInstancias();
 
 }
