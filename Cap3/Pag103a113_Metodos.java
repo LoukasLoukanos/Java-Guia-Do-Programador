@@ -9,7 +9,7 @@
  public class Pag103a113_Metodos {
 	//___SIMPLES_____________________________________________
 	public int hor, min, seg;
-	public void setHorario(int h, int m, int s) {
+	public void setHorar(int h, int m, int s) {
 		hor = h;
 		min = m;
 		seg = s;
@@ -52,35 +52,4 @@
 			getHoras(), getMinutos(), getSegundos());
 	}
 	
-
-	//EXEMPLO DE INSTÂNCIA DE OBJETOS DA CLASSE:_____________________
-	// declara e instancia objeto tipo Pag103a113_Metodos
-	Pag103a113_Metodos obj_horario = new Pag103a113_Metodos (); 
-
-	// ajusta objeto com valores válidos
-	obj_horario.setHorario(15, 30, 10);
-	
-	// exibe hora
-	System.out.println("Hora: "+ obj_horario.toString()); 
-
-	// prepara console
-	Scanner sc = new Scanner(System.in); 
-	// lê valores de hora, minuto e segundo em variáveis auxiliares
-	System.out.print("Horas ? ");
-	int h = sc.nextInt();
-	System.out.print("Minutos ? ");	
-	int m = sc.nextInt();
-	System.out.print("Segundos ? ");
-	int s = sc.nextInt();
-	sc.close();
-
-	// ajusta objeto com valores dados
-	hora.setHorario(h, m, s);
-
-	// exibe hora
-	System.out.println("Hora: "+ obj_horario.toString());
-	if (obj_horario.getHoras()>=18 || obj_horario.getHoras()<6) {
-		System.out.println("E noite!");
-	} else {
-		System.out.println("E dia!");
-}
+ }
