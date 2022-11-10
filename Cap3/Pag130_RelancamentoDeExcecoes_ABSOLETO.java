@@ -1,6 +1,6 @@
 //__________________________________________________________________________________________________
 //__________VER código atualizado com a versão 7 do Java: Pag132_TratamentoDeExcecoes.java__________
-public class Pag130_RelancamentoDeExcecoes_ABSOLETO {
+public class Pag130_RelancamentoDeExcecoes_ABSOLETO { // VER SIMPLIFICADO: Pag131_RelancamentoDeExcecoes_ABSOLETO
 	@SuppressWarnings("deprecation")
 	public static Object create (String className)
 		throws ClassNotFoundException, IllegalAccessException {
