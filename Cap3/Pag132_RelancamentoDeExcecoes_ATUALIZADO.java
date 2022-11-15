@@ -1,20 +1,19 @@
-//____________________________________________________________________________________________________________________________
-//VER Código atualizado FinalRethrow com a versão 7 do Java (código repetitivo simplificado): Pag132_TratamentoDeExcecoes.java
-public class Pag131_RelancamentoDeExcecoes_ABSOLETO { // VER ABSOLETO Rethrow: Pag130_RelancamentoDeExcecoes_ABSOLETO.java
+//_______________________________________________________________________________________________________________
+//__________Código atualizado FinalRethrow com a versão 7 do Java (código repetitivo simplificado):______________
+public class Pag132_RelancamentoDeExcecoes_ATUALIZADO {
+	//VER Rethrow ABSOLETOS: Pag130_RelancamentoDeExcecoes_ABSOLETO.java e Pag131_RelancamentoDeExcecoes_ABSOLETO.java
 	@SuppressWarnings("deprecation")
 	public static Object create (String className)
 		throws Exception {
 		try {
 			Class<?> classe = Class.forName(className);
 			return classe.newInstance();
-		} catch (ClassNotFoundException e) {
-			throw e; // rethrow
 		} catch (InstantiationException e) {
 			// tratamento local
 			System.out.println(e + "\nObjeto nao criado");
 			return null;
-		} catch (IllegalAccessException e) {
-			throw e; // rethrow
+		} catch (final Exception e) {
+			throw e; // final rethrow
 		}
 	}
 	public static void main(String... a) {
@@ -25,7 +24,7 @@ public class Pag131_RelancamentoDeExcecoes_ABSOLETO { // VER ABSOLETO Rethrow: P
 			}
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println(e + "\nFalta argumento com nome da classe!");
-		// catch genérico
+		// multi-catch
 		} catch (Exception e) {
 			System.out.println(e);
 		}
