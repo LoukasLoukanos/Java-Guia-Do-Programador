@@ -35,3 +35,6 @@ public class Code {
 		return res;
 	}
 }
+//Code.fibonacci(10) → retorna o 10°­ termo da sequência
+//Code.aritmetica(0, 2, 4) → retorna o 4° termo da PA de inicio 0 e razão 2
+//Code.geometrica(1, 0.5, 8) → retorna o 8° termo da PG de inicio 1 e razão 0.5
