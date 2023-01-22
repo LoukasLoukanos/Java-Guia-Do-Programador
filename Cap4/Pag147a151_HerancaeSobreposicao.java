@@ -63,3 +63,34 @@ public class ArquivoExemplo_3 extends Pag147a151_HerancaeSobreposicao {
 		super(1.0, -273.0); 
 	}
 }
+
+import java.util.Scanner;
+public class ArquivoExemplo_4 {
+	public static void main (String arg[ ]) {
+		// prepara console
+		Scanner sc = new Scanner(System.in); 
+
+		System.out.print("Digite temperatura Celsius: ");
+		// lê temp Celsius
+		double tempC = sc.nextDouble();	 
+		sc.close();
+		// cria conversor Celsius p/ Kelvin e exibe info
+		ArquivoExemplo_2 ck = new ArquivoExemplo_2();
+		// uso implícito de toString()
+		System.out.println("ck : "+ ck); 
+		// conversão C-->K
+		double tempK = ck.converter(tempC); 
+		// resultado
+		System.out.println("tempK = "+ tempK + "K"); 
+
+		// cria conversor Kelvin p/ Celsius e exibe info
+		ArquivoExemplo_3 kc = new ArquivoExemplo_3();
+		// uso implícito de toString()
+		System.out.println("kc : "+ kc); 
+		// conversão K-->C
+		tempC = kc.converter(tempK); 
+		// resultado
+		System.out.println("tempC = "+ tempC + "C"); 
+	}
+}
+
