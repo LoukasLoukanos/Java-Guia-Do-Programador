@@ -20,7 +20,6 @@ public class Pag147a151_HerancaeSobreposicao {
 		return "Pag147a151_HerancaeSobreposicao[kProp=" +kProp+",kLin= " + kLin+"]";
 	}
 
-public class Aplicacao {
 	public static void main(String[] args) {
 		// Um conversor de medidas em centímetros para polegadas poderia ser definido, instanciado e usado assim (com o jshell omitindo os comentários):
 
@@ -35,12 +34,15 @@ public class Aplicacao {
 		// conversão cn para pol
 		double pol = c2p.converter (cm);
 
-		//vars   →   exibe variáveis e seus valores
+		//vars   →   exibe variáveis e seus valores (no jshell)
+		System.out.println("cm: " + cm);
+		System.out.println("pol: " + pol);
 	}
+	
 }
 
 
-
+/*
 // Outros conversores podem ser criados como no exemplo acima↑, porém a infraestrutura da classe Pag147a151_HerancaeSobreposicao
 // é aproveitada melhor na implementação de conversores específicos por meio da herança :
 public class ArquivoExemplo_1 extends Pag147a151_HerancaeSobreposicao {
@@ -93,4 +95,4 @@ public class ArquivoExemplo_4 {
 		System.out.println("tempC = "+ tempC + "C"); 
 	}
 }
-
+*/
