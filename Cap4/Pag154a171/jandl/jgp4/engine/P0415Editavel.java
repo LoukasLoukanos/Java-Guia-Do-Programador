@@ -1,9 +1,9 @@
 package jandl.jgp4.engine;
 
-public class P0415MensagemEditavel extends P0413Mensagem 
+public class P0415Editavel extends P0413Mensagem 
 		implements P0411Imprimivel, P0412Editavel {
 
-	public P0415MensagemEditavel (String conteudo) {
+	public P0415Editavel (String conteudo) {
 		super(conteudo);
 	}
 
