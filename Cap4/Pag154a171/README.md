@@ -1,0 +1,12 @@
+- Classes abstratas;
+- Interfaces:
+  - Realização de interfaces;
+  - Evolução de interfaces;
+  - Métodos default;
+  - Métodos estáticos;
+  - Métodos privados;
+  - Interfaces de marcação;
+  - Interfaces funcionais;
+- Polimorfismo:
+  - Upcasting;
+  - Downcasting.
