@@ -1,27 +1,30 @@
 package jandl.jgp4.geom;
 
+// O emprego do modificador abstract é útil para definir um protótipo, i.e., um método sem bloco de código
+// Implicações → torna impossível instanciar objetos da classe (pois há o pressuposto de que existem métodos incompletos)
+// Obs: mesmo sem métodos abstratos, uma classe pode ser declarada abstract para evitar a instanciação de seus objetos.
 public abstract class P0407Forma {
-	// array de medidas
-	private double medida[]; 
-	// Construtor parametrizado
-	public P0407Forma(int numMedidas) {
-		// aloca array de medidas
-		medida = new double[numMedidas];
+
+	private double medida[]; // declaração do array 'medidas' de forma privada para obrigar o uso dos métodos setMedida(int, double) e getMedida(int)
+	
+	public P0407Forma(int numMedidas) { // Construtor parametrizado
+		medida = new double[numMedidas]; // aloca o array 'medidas' que foi declarado
 	}
-	// Métodos
-	// obtém uma medida
-	public double getMedida(int i) { 
+
+	// Métodos_________________________________________________________________________________
+	public double getMedida(int i) { // obtém uma medida
 		if (i<0 || i>=medida.length) {
 			throw new RuntimeException("Numero invalido de medida.");
 		}
 		return medida[i];
 	}
-	// retorna no. de medidas
-	public int getNumMedidas () { 
+	
+	public int getNumMedidas () { // retorna no. de medidas
 		return medida.length;
 	}
-	// ajusta uma medida
-	protected void setMedida (int i, double m) { 
+	
+	// é protected para permitir que futuras subclasses decidam colocar sua exibição como públic, tornando alteráveis as medidas do objeto (public para protected não é permitido)
+	protected void setMedida (int i, double m) { // ajusta uma medida
 		if (i<0 || i>=medida.length) {
 			throw new RuntimeException("Numero invalido de medida.");
 		}
@@ -30,8 +33,8 @@ public abstract class P0407Forma {
 		}
 		medida[i] = m;
 	}
-	// representação textual
-	@Override
+	
+	@Override // representação textual
 	public String toString () {
 		StringBuffer sb = new StringBuffer(getClass().getName());
 		sb.append("[medidas:");
@@ -42,6 +45,6 @@ public abstract class P0407Forma {
 		sb.append("]");
 		return sb.toString();
 	}
-	// método abstrato que determinará a área
-	public abstract double area ();
+	
+	public abstract double area (); // método abstrato que determinará a área
 }
