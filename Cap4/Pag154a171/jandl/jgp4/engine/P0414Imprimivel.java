@@ -1,7 +1,6 @@
 package jandl.jgp4.engine;
 
-public class P0414Imprimivel extends P0413Mensagem
-		implements P0411Imprimivel {
+public class P0414Imprimivel extends P0413Mensagem implements P0411Imprimivel {
 			
 	public P0414Imprimivel (String conteudo) {
 		super(conteudo);
