@@ -1,6 +1,9 @@
 package jandl.jgp4.engine;
+// → Interfaces podem ser reusadas ao modificar suas funcionalidades por meio da herança, definindo-se subinterfaces
 
+// herda da interface pai P0412Editavel
 public interface P0416Editavel2 extends P0412Editavel {
+	
 	// método estático (alteração exemplo 4.18)
 	static String transformar (String conteudo, int shift) {
 		char[] array = conteudo.toCharArray();
