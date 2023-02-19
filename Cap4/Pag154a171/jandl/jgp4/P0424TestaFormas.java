@@ -6,9 +6,13 @@ import jandl.jgp4.geom.*;
   Isso é possível porque esses objetos podem herdar o mesmo método da superclasse, mas podem implementá-lo de 
   maneiras diferentes em cada subclasse.
 
-  ♦ O UPCASTING é a conversão de um objeto de uma subclasse para um objeto de sua superclasse. Isso é possível porque a subclasse herda todos os métodos e atributos da superclasse, o que significa que um objeto da subclasse pode ser tratado como se fosse um objeto da superclasse.
+  ♦ O UPCASTING é a conversão de um objeto de uma subclasse para um objeto de sua superclasse. Isso é possível 
+  porque a subclasse herda todos os métodos e atributos da superclasse, o que significa que um objeto da subclasse 
+  pode ser tratado como se fosse um objeto da superclasse.
 
-  ♦ O DOWNCASTING é a conversão de um objeto de uma superclasse para um objeto de sua subclasse. Isso é possível se o objeto for realmente uma instância da subclasse. Nesse caso, é possível acessar os métodos e atributos específicos da subclasse que não estão presentes na superclasse.
+  ♦ O DOWNCASTING é a conversão de um objeto de uma superclasse para um objeto de sua subclasse. Isso é possível 
+  se o objeto for realmente uma instância da subclasse. Nesse caso, é possível acessar os métodos e atributos 
+  específicos da subclasse que não estão presentes na superclasse.
 
 
   Resumidamente:
@@ -39,20 +43,23 @@ public class P0424TestaFormas {
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
 		P0408Circunferencia c = new P0408Circunferencia(3.45); 
-		P0407Forma f = c; // UPCASTING → a instância da subclasse P0408Circunferencia 'c' foi atribuída à variável do tipo da superclasse P0407Forma 'f'.
+		P0407Forma f = c; 
+		// UPCASTING → a instância da subclasse P0408Circunferencia 'c' foi atribuída à variável do tipo da superclasse P0407Forma 'f'.
 		
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
-		P0407Forma f1 = new P0409Retangulo(1.0, 2.0); // UPCASTING → a instância da subclasse P0409Retangulo foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'f1' (mais prático e limpo).
+		P0407Forma f1 = new P0409Retangulo(1.0, 2.0); 
+		// UPCASTING → a instância da subclasse P0409Retangulo foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'f1' (mais prático e limpo).
 		
 
 		// DOWNCASTING (Conversão de uma instância da superclasse para uma instância da subclasse)
-		P0409Retangulo r = (P0409Retangulo) f1; //DOWNCASTING → a instância da superclasse P0407Forma 'f1' foi atribuída à variável do tipo de subclasse P0409Retangulo 'r'
+		P0409Retangulo r = (P0409Retangulo) f1; 
+		//DOWNCASTING → a instância da superclasse P0407Forma 'f1' foi atribuída à variável do tipo de subclasse P0409Retangulo 'r'
 
 
 		//POLIMORFISMO: Objetos de diferentes classes ('f' da superclasse P0407Forma e 'r' da subclasse P0409Retangulo) respondem de forma diferente a um mesmo método .area()
-		System.out.println("area circulo = "+ f.area()); // ressaltando que 'f' virou objeto da superclasse P0407Forma graças ao UPCASTING
-		System.out.println("area retangulo = "+ r.area()); // ressaltando que 'r' virou objeto da superclasse P0407Forma graças ao DOWNCASTING
+		System.out.println("Area circulo = "+ f.area()); // ressaltando que 'f' ao ser instanciado virou objeto da superclasse P0407Forma graças ao UPCASTING
+		System.out.println("Area retangulo = "+ r.area()); // ressaltando que 'r' ao ser instanciado virou objeto da subclasse P0409Retangulo graças ao DOWNCASTING
 
 
 
@@ -73,24 +80,28 @@ public class P0424TestaFormas {
 
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
-		P0408Circunferencia c2 = new P0408Circunferencia(1.5); // UPCASTING → a instância da subclasse P0408Circunferencia foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'c2'.
-		System.out.println("areaCirc = "+ c2.area());
+		P0408Circunferencia c2 = new P0408Circunferencia(1.5); 
+		// UPCASTING → a instância da subclasse P0408Circunferencia foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'c2'.
 
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
-		P0409Retangulo r2 = new P0409Retangulo(2.5, 4.0); // UPCASTING → a instância da subclasse P0409Retangulo foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'r2'.
-		System.out.println("areaRet = "+ r2.area());
+		P0409Retangulo r2 = new P0409Retangulo(2.5, 4.0); 
+		// UPCASTING → a instância da subclasse P0409Retangulo foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'r2'.
+		
+		
+		// POLIMORFISMO: Objetos de diferentes classes ('c2' da subclasse P0408Circunferencia e 'r2' da subclasse P0409Retangulo) respondem de forma diferente a um mesmo método .area()
+		System.out.println("Area circulo = "+ c2.area()); // ressaltando que 'c2' ao ser instanciado virou objeto da superclasse P0407Forma graças ao UPCASTING
+		System.out.println("Area retangulo = "+ r2.area()); // ressaltando que 'r2' ao ser instanciado virou objeto da superclasse P0407Forma graças ao UPCASTING
 
 
-		//POLIMORFISMO: Objetos de diferentes classes ('c2' da subclasse P0408Circunferencia e 'r2' da subclasse P0409Retangulo) respondem de forma diferente a um mesmo método .area()
 		P0407Forma formas[] = new P0407Forma[3]; 
-		formas[0] = c2; // ressaltando que 'c2' virou objeto da superclasse P0407Forma graças ao UPCASTING
-		formas[1] = r2; // ressaltando que 'r2' virou objeto da superclasse P0407Forma graças ao UPCASTING
-		formas[2] = new P0410Triangulo(1.0, 2.0, 2.0); // virou objeto da superclasse P0407Forma polo UPCASTING
+		formas[0] = c2;
+		formas[1] = r2;
+		formas[2] = new P0410Triangulo(1.0, 2.0, 2.0); 
 
 		for (int i=0; i<formas.length; i++) {
 			System.out.println(formas[i]);
-			System.out.println("area = "+ formas[i].area());
+			System.out.println("area = "+ formas[i].area()); // POLIMORFISMO: Objetos de diferentes classes respondem de forma diferente a um mesmo método
 		}
 	}
 }
