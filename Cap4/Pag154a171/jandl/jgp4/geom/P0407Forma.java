@@ -2,7 +2,7 @@ package jandl.jgp4.geom;
 
 // O emprego do modificador abstract é útil para definir um protótipo, i.e., um método sem bloco de código
 // Implicações → torna impossível instanciar objetos da classe (pois há o pressuposto de que existem métodos incompletos)
-// Obs: mesmo sem métodos abstratos, uma classe pode ser declarada abstract para evitar a instanciação de seus objetos.
+// Obs: mesmo sem métodos abstratos, uma classe pode ser declarada abstract para evitar a instanciação de seus objetos. Contanto, objetos de subclasses que herdem desta superclasse poderão ser instanciados.
 public abstract class P0407Forma {
 
 	private double medida[]; // declaração do array 'medidas' de forma privada para obrigar o uso dos métodos setMedida(int, double) e getMedida(int)
