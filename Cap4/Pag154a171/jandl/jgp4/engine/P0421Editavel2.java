@@ -8,7 +8,9 @@ public class P0421Editavel2 extends P0415Editavel implements P0420Especial {
 		super(conteudo);
 	}
 
-	/* esta classe implementa uma interface de marcação (P0420Especial) portanto ela deve seguir as regras ou contratos associados a esta interface. Mesmo que a interface seja de marcação (não tenha nenhum método ou constante definido nela) */
+	/* Esta classe implementa uma interface de marcação (P0420Especial) portanto ela deve seguir as regras 
+	ou contratos associados a esta interface. Mesmo que a interface seja de marcação (não tenha nenhum 
+	método ou constante definido nela) */
 
 	public void operadorEspecialInstanceof () {
 

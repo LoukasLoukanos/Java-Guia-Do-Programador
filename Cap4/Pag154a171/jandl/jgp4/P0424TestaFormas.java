@@ -36,24 +36,25 @@ public class P0424TestaFormas {
 	  mais específicas P0408Circunferencia, P0409Retangulo e P0410Triangulo. Ao instanciar 
 	  objetos dessas subclasses obtemos a herança da superclasse, e, graças ao mecanismo de 
 	  polimorfismo, é permitido que uma superclasse possa ser referenciada por uma subclasse, 
-	  ou seja, um objeto de uma subclasse pode ser tratado como um objeto da superclasse. Isso 
-	  significa que um método em uma superclasse pode ser usado por um objeto de uma subclasse 
-	  sem a necessidade de escrever um método específico para a subclasse.*/
+	  ou seja, objetos de subclasses podem ser tratados como objetos da superclasse, de modo 
+	  que podem responder diferente a um mesmo método. Isso significa que um método em uma 
+	  superclasse pode ser usado por um objeto de uma subclasse sem a necessidade de 
+	  escrever um método específico para a subclasse. */
 	public static void main (String a[]) {
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
 		P0408Circunferencia c = new P0408Circunferencia(3.45); 
-		P0407Forma f = c; 
+		P0407Forma f = c;  // Superclasse obj = new Subclasse(); → explicação na linha 67
 		// UPCASTING → a instância da subclasse P0408Circunferencia 'c' foi atribuída à variável do tipo da superclasse P0407Forma 'f'.
 		
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
-		P0407Forma f1 = new P0409Retangulo(1.0, 2.0); 
-		// UPCASTING → a instância da subclasse P0409Retangulo foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'f1' (mais prático e limpo).
+		P0407Forma f1 = new P0409Retangulo(1.0, 2.0); // Superclasse obj = new Subclasse(); → explicação na linha 67
+		// UPCASTING → a instância da subclasse P0409Retangulo foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'f1' (mais prático e limpo que a maneira anterior, acima↑...).
 		
 
 		// DOWNCASTING (Conversão de uma instância da superclasse para uma instância da subclasse)
-		P0409Retangulo r = (P0409Retangulo) f1; 
+		P0409Retangulo r = (P0409Retangulo) f1;
 		//DOWNCASTING → a instância da superclasse P0407Forma 'f1' foi atribuída à variável do tipo de subclasse P0409Retangulo 'r'
 
 
@@ -75,17 +76,19 @@ public class P0424TestaFormas {
 		atributos que foram definidos na classe Superclasse, além dos métodos herdados pela classe Subclasse. Eventuais 
 		métodos e atributos adicionados apenas na subclasse não estarão acessíveis através dessa referência, a não ser que 
 		façamos um DOWNCASTING da superclasse para a subclasse. Nesse caso, teremos acesso a todos os métodos e atributos 
-		apenas da subclasse, inclusive aqueles que foram adicionados exclusivamente nela.*/
+		apenas da subclasse, inclusive aqueles que foram adicionados exclusivamente nela. Assim, ao realizarmos DOWNCASTING, 
+		mesmo após usarmos a sintaxe 'Superclasse obj = new Subclasse();', teremos os mesmos privilégios que se obtém ao 
+		instanciar usando a sintaxe 'Subclasse obj = new Subclasse();. '*/
 		
 
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
-		P0408Circunferencia c2 = new P0408Circunferencia(1.5); 
+		P0408Circunferencia c2 = new P0408Circunferencia(1.5); // Subclasse obj = new Subclasse(); → explicação na linha 67
 		// UPCASTING → a instância da subclasse P0408Circunferencia foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'c2'.
 
 
 		// UPCASTING (Conversão de uma instância de uma subclasse para uma instância da superclasse)
-		P0409Retangulo r2 = new P0409Retangulo(2.5, 4.0); 
+		P0409Retangulo r2 = new P0409Retangulo(2.5, 4.0); // Subclasse obj = new Subclasse(); → explicação na linha 67
 		// UPCASTING → a instância da subclasse P0409Retangulo foi diretamente atribuída à variável do tipo da superclasse P0407Forma 'r2'.
 		
 		
@@ -97,7 +100,7 @@ public class P0424TestaFormas {
 		P0407Forma formas[] = new P0407Forma[3]; 
 		formas[0] = c2;
 		formas[1] = r2;
-		formas[2] = new P0410Triangulo(1.0, 2.0, 2.0); 
+		formas[2] = new P0410Triangulo(1.0, 2.0, 2.0); // Superclasse obj = new Subclasse(); → explicação na linha 67
 
 		for (int i=0; i<formas.length; i++) {
 			System.out.println(formas[i]);
