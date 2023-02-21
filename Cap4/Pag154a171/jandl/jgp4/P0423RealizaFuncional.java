@@ -6,10 +6,10 @@ import java.util.Arrays;
    compromisso de implementar o método FUNCIONAL que fora declarado.
    
    ♦ fixando:
-   → As classes IMPLEMENTAM interfaces e PROVIDEN seus próprios métodos para atender as 
-   especificações definidas pela interface. Portanto, o correto é dizer que as classes 
-   IMPLEMENTAM interfaces. A palavra "realizar" não é usada no contexto de implementação 
-   de interface em Java. */
+   → As classes IMPLEMENTAM (e não "realizam") interfaces e PROVIDEN seus próprios métodos 
+   para atender as especificações definidas pela interface. Portanto, o correto é dizer que 
+   as classes IMPLEMENTAM interfaces. A palavra "realizar" não é usada no contexto de 
+   implementação de interface em Java. */
 public class P0423RealizaFuncional implements P0422Funcional {
 	protected Object[] array;
 	

@@ -54,13 +54,13 @@ public class P0424TestaFormas {
 		
 
 		// DOWNCASTING (Conversão de uma instância da superclasse para uma instância da subclasse)
-		P0409Retangulo r = (P0409Retangulo) f1;
+		P0409Retangulo r = (P0409Retangulo) f1; // O objeto 'f1' é uma instância da Subclasse (foi convertido por UPCASTING)
 		//DOWNCASTING → a instância da superclasse P0407Forma 'f1' foi atribuída à variável do tipo de subclasse P0409Retangulo 'r'
 
 
 		//POLIMORFISMO: Objetos de diferentes classes ('f' da superclasse P0407Forma e 'r' da subclasse P0409Retangulo) respondem de forma diferente a um mesmo método .area()
-		System.out.println("Area circulo = "+ f.area()); // ressaltando que 'f' ao ser instanciado virou objeto da superclasse P0407Forma graças ao UPCASTING
-		System.out.println("Area retangulo = "+ r.area()); // ressaltando que 'r' ao ser instanciado virou objeto da subclasse P0409Retangulo graças ao DOWNCASTING
+		System.out.println("Area circulo = "+ f.area()); // ressaltando que 'f' ao ser instanciado foi convertido à objeto da superclasse P0407Forma graças ao UPCASTING
+		System.out.println("Area retangulo = "+ r.area()); // ressaltando que 'r' recebeu a conversão de objeto da subclasse P0409Retangulo para objeto da Superclasse P0407Forma graças ao DOWNCASTING
 
 
 
@@ -75,10 +75,11 @@ public class P0424TestaFormas {
 		variável de tipo Superclasse. Isso significa que podemos utilizar essa referência para acessar apenas os métodos e 
 		atributos que foram definidos na classe Superclasse, além dos métodos herdados pela classe Subclasse. Eventuais 
 		métodos e atributos adicionados apenas na subclasse não estarão acessíveis através dessa referência, a não ser que 
-		façamos um DOWNCASTING da superclasse para a subclasse. Nesse caso, teremos acesso a todos os métodos e atributos 
-		apenas da subclasse, inclusive aqueles que foram adicionados exclusivamente nela. Assim, ao realizarmos DOWNCASTING, 
-		mesmo após usarmos a sintaxe 'Superclasse obj = new Subclasse();', teremos os mesmos privilégios que se obtém ao 
-		instanciar usando a sintaxe 'Subclasse obj = new Subclasse();. '*/
+		façamos um DOWNCASTING da superclasse para a subclasse. Nesse caso, teremos acesso a todos os métodos e atributos da 
+		classe Subclasse e da sua superclasse, inclusive aqueles que foram adicionados exclusivamente na subclasse. Assim, ao 
+		realizarmos DOWNCASTING, mesmo após usarmos a sintaxe 'Superclasse obj = new Subclasse();', teremos os mesmos 
+		privilégios que se obtém ao instanciar usando a sintaxe 'Subclasse obj = new Subclasse();. 
+		Em síntese, com ambas as sintaxes estamos criando um objeto da subclasse que é convertido implicitamente para um objeto da superclasse através do UPCASTING, com concessão de acesso a todos os métodos e atributos da classe Subclasse e da sua Superclasse, e concessão ou restrição (dependendo da sintaxe) de acesso à eventuais métodos e atributos que tenham sido adicionados apenas na subclasse, podendo mudar a regra de restrição com DOWNCASTING. */
 		
 
 
@@ -93,8 +94,8 @@ public class P0424TestaFormas {
 		
 		
 		// POLIMORFISMO: Objetos de diferentes classes ('c2' da subclasse P0408Circunferencia e 'r2' da subclasse P0409Retangulo) respondem de forma diferente a um mesmo método .area()
-		System.out.println("Area circulo = "+ c2.area()); // ressaltando que 'c2' ao ser instanciado virou objeto da superclasse P0407Forma graças ao UPCASTING
-		System.out.println("Area retangulo = "+ r2.area()); // ressaltando que 'r2' ao ser instanciado virou objeto da superclasse P0407Forma graças ao UPCASTING
+		System.out.println("Area circulo = "+ c2.area()); // ressaltando que 'c2' ao ser instanciado foi convertido à objeto da superclasse P0407Forma graças ao UPCASTING
+		System.out.println("Area retangulo = "+ r2.area()); // ressaltando que 'r2' ao ser instanciado foi convertido à objeto da superclasse P0407Forma graças ao UPCASTING
 
 
 		P0407Forma formas[] = new P0407Forma[3]; 

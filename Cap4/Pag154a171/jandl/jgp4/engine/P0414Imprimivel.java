@@ -4,7 +4,7 @@ Obs: "Realizar" e "implementar" são termos usados de forma intercambiável para
 No contexto da programação, ambos os termos se referem à ação de uma classe implementar as definições de uma interface, 
 fornecendo implementações concretas para seus métodos e propriedades.No entanto, "implementar" é um termo mais comumente usado na 
 programação orientada a objetos, enquanto "realizar" é mais comumente usado em linguagens de programação orientadas a protocolos, 
-como Swift. Ambas as palavras são sinônimos no contexto de programação e podem ser usadas para se referir à mesma ação.*/
+como Swift. Portanto, em Java o correto é dizer que as classes IMPLEMENTAM interfaces. */
 
 
 // herda da classe pai P0413Mensagem e implementa a interface P0411Imprimivel
