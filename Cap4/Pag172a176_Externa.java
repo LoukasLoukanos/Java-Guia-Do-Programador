@@ -12,7 +12,7 @@ específicos para uma classe externa. Isso pode ajudar a tornar o código mais m
 → Criação de classes auxiliares: As classes internas podem ser usadas para criar classes auxiliares que são usadas apenas pela 
 classe externa. Isso pode ajudar a evitar a criação de classes desnecessárias e tornar o código mais organizado. */
 
-// classe externa ou outter class ou enclosing class
+// CLASSE EXTERNA ou outter class ou enclosing class
 public class Pag172a176_Externa {
 
 	private int valor; 
@@ -21,8 +21,8 @@ public class Pag172a176_Externa {
 		this.valor = valor;
 	}
 
-	// classe interna (ou inner class)
-	public class Aninhada { // o especificador da classe determina seu acesso externo: se pública, poderá ser acessada e instanciada; se privada, seu uso será exclusivo por parte da classe externa
+	// CLASSE INTERNA (ou inner class)
+	public class Aninhada { // o especificador da classe determina seu acesso externo: se pública, poderá ser acessada e instanciada; se privada, seu uso será exclusivo por parte da CLASSE EXTERNA
 		public void exibir () {
 			System.out.println("valor = "+ valor);
 		}
@@ -31,9 +31,9 @@ public class Pag172a176_Externa {
 	// Carregamento da classe Pag172a176_Externa no shell:
 	// open Pag172a176_Externa.java
 
-	//instanciação da classe externa:
+	//instanciação da CLASSE EXTERNA (para referência de instanciação da CLASSE INTERNA):
 	Pag172a176_Externa obj_externa = new Pag172a176_Externa (10);
 
-	//instanciação da classe interna:
+	//instanciação da CLASSE INTERNA (a partir da referência do objeto da CLASSE EXTERNA):
 	Pag172a176_Externa.Aninhada obj_interna = obj_externa.new Aninhada ();
 }
