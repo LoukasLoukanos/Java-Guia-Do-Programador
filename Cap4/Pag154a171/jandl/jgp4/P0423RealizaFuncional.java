@@ -2,8 +2,8 @@ package jandl.jgp4;
 
 import java.util.Arrays;
 
-/* "Implementa" (realiza é mais propício) a interface FUNCIONAL P0422Funcional, assumindo o
-   compromisso de implementar o método FUNCIONAL que fora declarado.
+/* "Implementa" (e não "realiza") a interface FUNCIONAL P0422Funcional, pois
+   assume o compromisso de implementar o método FUNCIONAL que fora declarado.
    
    ♦ fixando:
    → As classes IMPLEMENTAM (e não "realizam") interfaces e PROVIDEN seus próprios métodos 
