@@ -1,16 +1,17 @@
-/*Em Java, as classes internas, também conhecidas como classes aninhadas, podem ser usadas para diversos fins, tais como:
+/*Em Java, as classes internas e classes aninhadas, podem ser usadas para diversos fins, tais como:
 
-→ Encapsulamento: As classes internas podem ser usadas para encapsular uma classe que é relevante apenas para a classe externa. 
+→ Encapsulamento: Podem ser usadas para encapsular uma classe que é relevante apenas para a classe externa. 
 Isso pode ajudar a reduzir a poluição do espaço de nomes e tornar o código mais fácil de ler e entender.
 
-→ Acesso a membros privados: As classes internas podem acessar membros privados da classe externa, incluindo variáveis e métodos 
-privados. Isso pode ser útil quando a classe interna precisa acessar ou modificar esses membros privados.
+→ Acesso a membros privados: Podem acessar membros privados da classe externa, incluindo variáveis e métodos 
+privados. Isso pode ser útil quando é necessário acessar ou modificar esses membros privados.
 
-→ Implementação de interfaces: As classes internas podem implementar interfaces, o que pode ser útil para definir comportamentos 
+→ Implementação de interfaces: Podem implementar interfaces, o que pode ser útil para definir comportamentos 
 específicos para uma classe externa. Isso pode ajudar a tornar o código mais modular e fácil de manter.
 
-→ Criação de classes auxiliares: As classes internas podem ser usadas para criar classes auxiliares que são usadas apenas pela 
+→ Criação de classes auxiliares: Podem ser usadas para criar classes auxiliares que são usadas apenas pela 
 classe externa. Isso pode ajudar a evitar a criação de classes desnecessárias e tornar o código mais organizado. */
+
 
 // CLASSE EXTERNA ou outter class ou enclosing class
 public class Pag172a176_Externa {
