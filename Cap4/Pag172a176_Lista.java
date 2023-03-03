@@ -29,7 +29,7 @@ public class Pag172a176_Lista {
 		System.out.println("<.>");
 	}
 	
-	// CLASSE ANINHADA ESTÁTICA → (lembrando: Classes aninhadas estáticas não são, formalmente, consideradas CLASSES INTERNAS)
+	// CLASSE ANINHADA ESTÁTICA → (lembrando: "Classes aninhadas estáticas não são, formalmente, consideradas CLASSES INTERNAS". Ver: Pag172a176_OutraExterna)
 	private static class Nodo {
 		public String nome;
 		public Nodo proximo;

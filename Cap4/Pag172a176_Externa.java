@@ -37,3 +37,42 @@ public class Pag172a176_Externa {
 	//instanciação da CLASSE INTERNA (a partir da referência do objeto da CLASSE EXTERNA):
 	Pag172a176_Externa.Aninhada obj_interna = obj_externa.new Aninhada ();
 }
+
+
+
+/* Classes Anônimas → é uma classe interna auxiliar sem nome, definida como uma subclasse ou como 
+uma realização de uma interface, com o propósito de servir para a instanciação de um único objeto:
+
+__________________________________________________________________________________________
+♦ Sem o uso de Classe interna anônima poderiamos ter:
+class A extends SuperClasse {
+	public void  metodo () {
+		// bloco do método
+	}
+}
+
+class B implements Interface {
+	public void  metodo () {
+		// bloco do método
+	}
+}
+
+• Teríamos que instanciar objetos assim ↓:
+A obj = new A ();
+B obj = new B ();
+
+__________________________________________________________________________________________
+♦ Com o uso de Classe interna anônima podemos ter:
+SuperClasse obj = new SuperClasse () { // classe interna anônima (invisível)
+	public void  metodo () {
+		// bloco do método
+	}
+}
+
+Interface obj = new Interface () { // classe interna anônima (invisível)
+	public void  metodo () {
+		// bloco do método
+	}
+}
+
+• Os objetos ja foram instanciados nas classes internas anônimas ↑ */
