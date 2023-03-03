@@ -41,11 +41,36 @@ public class Pag172a176_Externa {
 
 
 
-/* Classes Anônimas → é uma classe interna auxiliar sem nome, definida como uma subclasse ou como 
-uma realização de uma interface, com o propósito de servir para a instanciação de um único objeto:
+/* As classes anônimas em Java são utilizadas para criar classes que não precisam de um nome específico 
+e podem ser usadas apenas uma vez. Elas são criadas no momento da sua declaração e podem ser usadas para 
+implementar uma interface ou uma classe abstrata.
+
+As classes anônimas são definidas dentro de uma expressão, em vez de serem definidas explicitamente como 
+uma classe separada. Elas são úteis para criar objetos temporários ou para passar uma implementação 
+personalizada como um parâmetro em um método.
+
+
+Um exemplo de uso de classe anônima é a implementação de um ActionListener 
+em uma interface gráfica de usuário. Um código pode ficar assim:
+button.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        // código de ação do botão aqui
+    }
+});
+Nesse exemplo, estamos criando uma classe anônima que implementa a interface ActionListener 
+e define o método actionPerformed para executar uma ação quando o botão é clicado.
+
+
+As classes anônimas são uma ferramenta útil para simplificar o código e evitar a necessidade de criar classes 
+separadas para pequenas implementações de interfaces ou classes abstratas. No entanto, elas devem ser usadas 
+com moderação, pois podem tornar o código mais difícil de entender se forem usadas em excesso.
+
+Resumindo: Classe Anônima → é uma classe interna auxiliar sem nome, definida (implicitamente) como uma subclasse 
+ou como uma realização de uma interface, com o propósito de servir para a instanciação de um único objeto.
 
 __________________________________________________________________________________________
 ♦ Sem o uso de Classe interna anônima poderiamos ter:
+
 class A extends SuperClasse {
 	public void  metodo () {
 		// bloco do método
@@ -64,16 +89,17 @@ B obj = new B ();
 
 __________________________________________________________________________________________
 ♦ Com o uso de Classe interna anônima podemos ter:
-SuperClasse obj = new SuperClasse () { // classe interna anônima (invisível)
+
+SuperClasse obj = new SuperClasse () { // classe interna anônima (definida implicitamente)
 	public void  metodo () {
 		// bloco do método
 	}
 }
 
-Interface obj = new Interface () { // classe interna anônima (invisível)
+Interface obj = new Interface () { // classe interna anônima (definida implicitamente)
 	public void  metodo () {
 		// bloco do método
 	}
 }
 
-• Os objetos ja foram instanciados nas classes internas anônimas ↑ */
+• Os objetos ja foram instanciados nas classes internas anônimas ↑  */
