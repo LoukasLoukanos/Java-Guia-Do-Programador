@@ -5,8 +5,26 @@ public class Pag180e181_Enumeracoes {
     Também contém os métodos: values(), que retorna um arranjo das constantes; valueOf(String), que retorna a constante 
     indicada pela String, além de equals(object), hasCode() e toString().
     
+    
+    ♦ Os cinco maiores benefícios de usar enumerações:
+    1. Legibilidade: O uso de enums torna o código mais legível, já que é possível atribuir um nome significativo para cada valor possível. 
+    Isso torna mais fácil entender o propósito das variáveis e dos parâmetros que são definidos como enums.
+    
+    2. Segurança de tipo: Ao usar enums, é possível ter mais segurança de tipo do que ao usar constantes ou valores literais, já que apenas 
+    os valores definidos dentro da enumeração podem ser atribuídos a variáveis do tipo enum.
+    
+    3. Evolução: Se você precisar adicionar ou remover um valor de enumeração, não é necessário alterar o código em todos os lugares em que 
+    a enumeração é usada. Isso significa que a manutenção do código é mais fácil e menos propensa a erros.
+    
+    4. Código mais claro e fácil de manter: Ao usar enumerações, o código se torna mais claro e fácil de manter, pois os valores possíveis 
+    são agrupados em um único lugar e podem ser referenciados por um nome significativo. Isso também torna o código mais fácil de ler e entender.
+    
+    5. Melhoria na produtividade: Com o uso de enumerações, a produtividade é melhorada, já que é possível escrever menos código e evitar erros 
+    comuns relacionados a digitação, como erros de ortografia ou de formatação.
+    
+    
     → Desvantagens de NÃO utilizar Enumerações: seu código é compilado junto das classes que a utilizam, assim a adição de 
-    constantes exige uma nova compilação; o uso das constantes requer o nome da classe como prefixo; as cons- tantes não podem 
+    constantes exige uma nova compilação; o uso das constantes requer o nome da classe como prefixo; as constantes não podem 
     ser facilmente traduzidas em texto informativo; só podem ser usadas como valores primitivos; e, dado que as constantes são 
     nomes associados a inteiros, não permitem checagem de tipo, pois se confundem com outras constantes definidas do mesmo modo.
     
@@ -14,6 +32,7 @@ public class Pag180e181_Enumeracoes {
     de constantes define um tipo de dados diferente, checado durante a compilação, seu código, compilado separado das classes 
     clientes, pode ser alterado livremente, os nomes das constan- tes são automaticamente usados como texto informativo. */
 
+    
     // • Declaração SEM uso de Enumerações:
     public static final int COMPACTAR_SEM_ENUMERACAO = 0;
     public static final int DESCOMPACTAR_SEM_ENUMERACAO = 1;
@@ -78,5 +97,42 @@ public class Pag180e181_Enumeracoes {
             }
         }
     }
+}
+// outros exemplos para facilitar a compreenção:___________________________
+// Sem Enumeração:
+public class SemEnum {
+    public static final int SEGUNDA_FEIRA = 1;
+    public static final int TERCA_FEIRA = 2;
+    public static final int QUARTA_FEIRA = 3;
+    public static final int QUINTA_FEIRA = 4;
+    public static final int SEXTA_FEIRA = 5;
+    public static final int SABADO = 6;
+    public static final int DOMINGO = 7;
+    
+    public static void main(String[] args) {
+        int diaDaSemana = SEGUNDA_FEIRA;
+        
+        if (diaDaSemana == SABADO || diaDaSemana == DOMINGO) {
+            System.out.println("Hoje é fim de semana!");
+        } else {
+            System.out.println("Hoje é dia útil.");
+        }
+    }
+}
 
+// Com enumeração:
+public class ComEnum {
+    public enum DiaDaSemana {
+        SEGUNDA_FEIRA, TERCA_FEIRA, QUARTA_FEIRA, QUINTA_FEIRA, SEXTA_FEIRA, SABADO, DOMINGO;
+    }
+    
+    public static void main(String[] args) {
+        DiaDaSemana diaDaSemana = DiaDaSemana.SEGUNDA_FEIRA;
+        
+        if (diaDaSemana == DiaDaSemana.SABADO || diaDaSemana == DiaDaSemana.DOMINGO) {
+            System.out.println("Hoje é fim de semana!");
+        } else {
+            System.out.println("Hoje é dia útil.");
+        }
+    }
 }
