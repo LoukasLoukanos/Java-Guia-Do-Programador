@@ -10,7 +10,7 @@ public class Pag183_SemGenerico {
 		System.out.println("Maior Double : " + maior(aD) + " de " + Arrays.toString(aD));
 	}
 	
-	// método sobrecarregado
+	// overload (sobrecarga de método)↓
 	public static Integer maior (Integer array[]) { 
 		Integer maior = array[0];
 		for (Integer elemento: array)
@@ -20,7 +20,7 @@ public class Pag183_SemGenerico {
 		return maior;
 	}
 	
-	// método sobrecarregado
+	// overload (sobrecarga de método)↑
 	public static Double maior (Double array[]) { 
 		Double maior = array[0];
 		for(Double elemento: array)

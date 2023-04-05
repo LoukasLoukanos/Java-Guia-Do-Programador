@@ -3,6 +3,7 @@ import java.util.*;
 public class Pag186_ListaComGenerico { // Classe usa genéricos
 
 	public static void main (String a[]) {
+		
 		// cria lista com indicação de parâmetro de tipo
 		List<Integer> num = new ArrayList<Integer>();
 		
