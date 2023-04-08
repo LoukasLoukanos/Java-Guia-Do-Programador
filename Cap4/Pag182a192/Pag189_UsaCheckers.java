@@ -1,12 +1,12 @@
-public class P0443UsaCheckers {
+public class Pag189_UsaCheckers {
 	public static void main(String[] args) {
-		// Uso da implementação específica de P0441Checker
-		P0441Checker<Boolean, Double> checker1 = new P0442LessThanChecker();
+		// Uso da implementação específica de Pag188_Checker
+		Pag188_Checker<Boolean, Double> checker1 = new Pag188_LessThanChecker();
 		System.out.println("10.0 < 4.5 = " + checker1.check(10.0, 4.5));
 		
-		// Uso de classe anônima de P0441Checker
-		P0441Checker<Double, Integer> checker2 = 
-			new P0441Checker <Double, Integer>() {
+		// Uso de classe anônima de Pag188_Checker
+		Pag188_Checker<Double, Integer> checker2 = 
+			new Pag188_Checker <Double, Integer>() {
 			
 				@Override
 				public Double check(Integer left, Integer right) {
