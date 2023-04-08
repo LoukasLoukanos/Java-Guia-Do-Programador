@@ -14,9 +14,10 @@ public class Pag186_ListaComGenerico { // Classe usa genéricos
 		// num.add(new String("qualquer coisa"));
 		
 		int tot = 0;
-		// coerção não é necessária
+		//tot+=((Integer) num.get(0)).intValue(); → Coerção (ou Cast/Downcasting) não é necessária↓ graças ao modo genérico
 		tot += num.get(0).intValue();
-		// autounboxing
+
+		//tot+=((Integer) num.get(1)); → Autounboxing (ou Automatic Unboxing) não é necessária↓ graças ao modo genérico
 		tot += num.get(1);
 		System.out.println("tot="+ tot);
 	}
