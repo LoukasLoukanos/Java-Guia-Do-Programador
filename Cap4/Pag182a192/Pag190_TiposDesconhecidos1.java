@@ -1,20 +1,15 @@
-/* Em Java, um tipo desconhecido é representado pelo uso do coringa (wildcard) "?" na definição de um tipo genérico. 
- * Esse coringa indica que não se sabe exatamente qual é o tipo que será utilizado em determinado momento. 
- * O uso de tipos desconhecidos com coringas pode ser útil em situações em que não se sabe exatamente qual é o tipo de 
- * objeto que será utilizado, mas é preciso garantir que determinadas operações possam ser realizadas com segurança.
+/* Quando não se especifica a limitação de tipos na parametrização de um tipo genérico em Java com o uso de letras coringas
+ * como <T>, <S>, etc, é assumido o tipo "Object" como limite, o que significa, na prática, que não há nenhum limite definido. 
+ * O coringa (wildcard) "?" indica que não há limitação de tipos na definição do tipo genérico. Isso significa que o TIPO é 
+ * DESCNHECIDEO, podendo ser QUALQUER e/ou DIFERENTES tipos utilizados.
  * 
  * Por exemplo, ao definir uma lista genérica, pode-se usar o coringa para permitir que a lista possa armazenar objetos de qualquer tipo:
  * → List<?> lista = new ArrayList<>();
  * Nesse caso, não se sabe qual é o tipo exato de objeto que será armazenado na lista, mas isso 
  * não é importante para algumas operações, como percorrer a lista ou verificar seu tamanho.
- * 
- * Também é possível usar o coringa com restrições, indicando que o tipo deve ser uma subclasse de uma classe específica ou implementar uma
- * interface específica. Por exemplo, para definir uma lista que pode armazenar apenas objetos que implementam a interface "Comparable":
- * → List<? extends Comparable> lista = new ArrayList<>();
- * Dessa forma, a lista pode armazenar objetos de diferentes classes que implementam a interface 
- * "Comparable", mas não pode armazenar objetos que não implementam essa interface. 
- * 
- * EXEMPLOS: Pag190_TiposDesconhecidos1↓ e Pag190_TiposDesconhecidos2 →...*/
+ *
+ *  
+ * EXEMPLOS: Pag190_TiposDesconhecidos1↓ e Pag190_TiposDesconhecidos2 →... */
 
 import java.util.List;
 import java.util.ArrayList;
