@@ -6,13 +6,15 @@ A vantagem das expressões lambda em Java é sua simplicidade, na sintaxe, uma e
 
 ### ***Regras, normas e permissões da sintaxe:***
 
- - Os parenteses iniciais podem ser omitidos quando a expressão lambda con- tém um único parâmetro, mas são obrigatórios quando um parâmetro não é requerido ou quando são dois ou mais.
+ - Os parenteses iniciais podem ser omitidos quando a expressão lambda contém um único parâmetro, mas são obrigatórios quando um parâmetro não é requerido ou quando são dois ou mais.
 
- - Os tipos dos parâmetros não precisam ser indicados quando o compilador pode inferi-los a partir do contexto de uso da expressão. 
+ - Os tipos dos parâmetros não precisam ser indicados quando o compilador pode inferi-los a partir do contexto de uso da expressão.
 
  - Quando a expressão contém somente uma expressão (forma pura), não é necessária a diretiva return.
 
  - As chaves são necessárias apenas quando a expressão lambda inclui várias diretivas, o que exige o uso explícito da diretiva return.
+
+#### **Exemplos:**
 
 ```java
 // SINTAXE BASE:
@@ -28,6 +30,30 @@ A vantagem das expressões lambda em Java é sua simplicidade, na sintaxe, uma e
     return soma;
 }
 
-// exemplo 3:
-(var x) -> Math.pow(x, 2) + 2*x + 1 //O uso de var pode ser mais flexível, pois permite tornar um parâmetro final, o que impede sua alteração dentro do lambda.
+// exemplo 3: O uso de var permite tornar um parâmetro final, o que impede sua alteração dentro do lambda.
+(var x) -> Math.pow(x, 2) + 2*x + 1 
+
+// exemplo 4: Ordenação de uma lista de objetos com base em um atributo específico:
+List<Pessoa> pessoas = Arrays.asList(new Pessoa("João", 30), new Pessoa("Maria", 25), new Pessoa("Pedro", 35));
+Collections.sort(pessoas, (p1, p2) -> p1.getIdade() - p2.getIdade());
+System.out.println(pessoas);
+// output: [Pessoa [nome=Maria, idade=25], Pessoa [nome=João, idade=30], Pessoa [nome=Pedro, idade=35]]
+
+// exemplo 5: Filtragem de itens em uma lista com base em uma condição específica:
+List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+List<Integer> filtro = numeros.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+System.out.println(filtro);
+// output: [2, 4, 6, 8, 10]
+
+// exemplo 6 : Mapeamento de valores de uma lista para outra lista com base em uma função específica:
+List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
+List<Integer> mapeamento = numeros.stream().map(n -> n * n).collect(Collectors.toList());
+System.out.println(mapeamento);
+// output: [1, 4, 9, 16, 25]
+
+// exemplo 7: Redução de uma lista em um único valor com base em uma função específica:
+List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
+int reducao = numeros.stream().reduce(0, (a, b) -> a + b);
+System.out.println(reducao);
+// output: 15
 ```
