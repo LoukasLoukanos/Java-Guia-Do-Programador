@@ -31,6 +31,9 @@ import java.util.function.BiFunction;
 import java.util.function.IntToDoubleFunction;
 import java.util.function.DoubleUnaryOperator;
 import java.util.function.IntUnaryOperator;
+import java.util.Calendar;
+import java.util.function.IntConsumer;
+import java.util.function.IntSupplier;
 
 public class Pag197_InterfaceFuncPredefinida {
 	public static void main(String[] args) {
@@ -60,5 +63,18 @@ public class Pag197_InterfaceFuncPredefinida {
 				+ half.andThen(plus1).applyAsDouble(3));
 		System.out.println("half(plus1(3))) = "
 				+ half.compose(plus1).applyAsDouble(3));
+
+		// Define supplier (produtor) de número do mês corrente
+		IntSupplier numMes = () -> Calendar.getInstance().get(Calendar.MONTH) + 1;
+
+		// Define consumer (consumidor) de inteiros
+		IntConsumer ref = (v) -> System.out.printf("consumed(%d)",v);
+
+		// Uso de supplier e consumer
+		int mes = numMes.getAsInt();
+		System.out.println("Supplier::Mes=" + mes);
+		System.out.print("Consumer::");
+		ref.accept(mes);
+		System.out.println();
 	}
 }
