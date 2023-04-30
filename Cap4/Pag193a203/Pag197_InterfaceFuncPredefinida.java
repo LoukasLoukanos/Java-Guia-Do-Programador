@@ -1,6 +1,13 @@
 /* Interfaces funcionais predefinidas tornam mais fácil a criação de funções lambda e métodos de referência em Java, 
  * uma vez que não é necessário criar uma nova interface funcional para cada tipo de função.
  * 
+ * As interfaces funcionais pré-definidas em Java oferecem uma maneira fácil e eficiente de lidar com programação orientada a objetos e programação funcional. 
+ * Essas interfaces são projetadas para representar funções matemáticas simples, que podem ser combinadas para criar algoritmos mais complexos. Elas também 
+ * oferecem uma maneira simples de criar código reutilizável e facilitam a implementação de padrões de design comuns, como o padrão de Observador ou o padrão 
+ * Strategy. Além disso, o uso de interfaces funcionais pré-definidas em Java pode tornar o código mais legível, conciso e fácil de manter, especialmente quando 
+ * combinado com recursos como expressões lambda e métodos de referência. Em resumo, as interfaces funcionais pré-definidas em Java oferecem uma maneira poderosa 
+ * de criar código flexível, modular e reutilizável.
+ * 
  * Algumas dessas interfaces incluem:
  * 
  * Predicate<T>: uma interface que representa uma função que recebe um objeto do tipo T como entrada e retorna um valor booleano.
@@ -110,7 +117,7 @@ public class Pag197_InterfaceFuncPredefinida {
 		// Métodos com assinatura double (double, double)
 		DoubleBinaryOperator f_max = Math::max;
 		BinaryOperator<Double> f_min = Math::min;
-		P0444Calculavel f_pow = Math::pow;
+		Pag195_InterfaceFuncional f_pow = Math::pow;
 		System.out.println("max(2.5, 5.2)=" + f_max.applyAsDouble(2.5, 5.2));
 		System.out.println("min(2.5, 5.2)=" + f_min.apply(2.5, 5.2));
 		System.out.println("pow(16.0, 0.5)=" + f_pow.calcular(16.0, 0.5));
