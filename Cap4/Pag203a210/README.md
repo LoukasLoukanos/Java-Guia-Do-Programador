@@ -13,3 +13,91 @@ Existem diferentes tipos de referências de método em Java, incluindo referênc
 | Método de isntância de objeto específico | objeto::metodoInstancia |
 | Método de isntância de objeto arbitrário de tipo | NomeClasse::metodoInstancia |
 | Construtor | NomeClasse::new |
+
+
+#### ***Referência de método estático: é usada para referenciar um método estático de uma classe. Exemplo:***
+
+```java
+public class Exemplo {
+   public static int dobro(int n) {
+      return n * 2;
+   }
+   
+   public static void main(String[] args) {
+      // referência de método estático
+      IntFunction<Integer> metodo = Exemplo::dobro;
+      
+      // chamada do método usando a referência
+      int resultado = metodo.apply(5);
+   }
+}
+```
+
+#### ***Referência de método de instância de objeto específico: é usada para referenciar um método de instância de um objeto específico. Exemplo:***
+
+```java
+public class Exemplo {
+   private int valor;
+   
+   public Exemplo(int valor) {
+      this.valor = valor;
+   }
+   
+   public int triplo() {
+      return valor * 3;
+   }
+   
+   public static void main(String[] args) {
+      // referência de método de instância de objeto específico
+      Exemplo e = new Exemplo(5);
+      IntSupplier metodo = e::triplo;
+      
+      // chamada do método usando a referência
+      int resultado = metodo.getAsInt();
+   }
+}
+```
+
+#### ***Referência de método de instância de objeto arbitrário de tipo: é usada para referenciar um método de instância de um objeto arbitrário de um tipo específico. Exemplo:***
+
+```java
+public class Exemplo {
+   private int valor;
+   
+   public Exemplo(int valor) {
+      this.valor = valor;
+   }
+   
+   public int triplo() {
+      return valor * 3;
+   }
+   
+   public static void main(String[] args) {
+      // referência de método de instância de objeto arbitrário de tipo
+      IntFunction<Integer> metodo = Exemplo::triplo;
+      
+      // chamada do método usando a referência
+      int resultado = metodo.apply(new Exemplo(5));
+   }
+}
+```
+
+#### ***Referência de construtor: é usada para referenciar um construtor de uma classe. Exemplo:***
+
+```java
+public class Exemplo {
+   private int valor;
+   
+   public Exemplo(int valor) {
+      this.valor = valor;
+   }
+   
+   public static void main(String[] args) {
+      // referência de construtor
+      IntFunction<Exemplo> construtor = Exemplo::new;
+      
+      // criação de um objeto usando a referência de construtor
+      Exemplo e = construtor.apply(5);
+   }
+}
+```
