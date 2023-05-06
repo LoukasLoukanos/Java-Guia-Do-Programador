@@ -25,7 +25,7 @@ public class Exemplo {
    
    public static void main(String[] args) {
       // referência de método estático
-      IntFunction<Integer> metodo = Exemplo::dobro;
+      IntFunction<Integer> metodo = Exemplo::dobro; // → NomeClasse::MetodoEstatico
       
       // chamada do método usando a referência
       int resultado = metodo.apply(5);
@@ -50,7 +50,7 @@ public class Exemplo {
    public static void main(String[] args) {
       // referência de método de instância de objeto específico
       Exemplo e = new Exemplo(5);
-      IntSupplier metodo = e::triplo;
+      IntSupplier metodo = e::triplo; // → objeto::metodoInstancia
       
       // chamada do método usando a referência
       int resultado = metodo.getAsInt();
@@ -74,7 +74,7 @@ public class Exemplo {
    
    public static void main(String[] args) {
       // referência de método de instância de objeto arbitrário de tipo
-      IntFunction<Integer> metodo = Exemplo::triplo;
+      IntFunction<Integer> metodo = Exemplo::triplo; // → NomeClasse::metodoInstancia
       
       // chamada do método usando a referência
       int resultado = metodo.apply(new Exemplo(5));
@@ -94,7 +94,7 @@ public class Exemplo {
    
    public static void main(String[] args) {
       // referência de construtor
-      IntFunction<Exemplo> construtor = Exemplo::new;
+      IntFunction<Exemplo> construtor = Exemplo::new; // → NomeClasse::new
       
       // criação de um objeto usando a referência de construtor
       Exemplo e = construtor.apply(5);
