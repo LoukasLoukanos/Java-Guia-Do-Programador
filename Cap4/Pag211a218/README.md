@@ -39,12 +39,28 @@ Existem vários tipos de formatadores em Java, cada um com uma finalidade espec�
  - NumberFormat: utilizado como classe base para formatadores de números, permitindo que diferentes tipos de números sejam formatados.
  - DateTimeFormatter: introduzido no Java 8, utilizado para formatar datas e horas de acordo com padrões definidos.
  - DecimalStyle: introduzido no Java 8, utilizado para definir as configurações de formatação de números decimais, como separador de milhar e separador decimal.
+ 
+### ***Exemplo simples de como usar formatadores em Java:***
 
-#### ***Exemplo: suponha que você queira formatar um número decimal com duas casas decimais e separador de milhar. Para isso, você pode criar um objeto do tipo DecimalFormat e definir o padrão desejado:***
-
+ - #### ***Caracteres usador pelo formatador Decimalformat:***
+   | Caractere | Posição | Significado ou efeito produzido |
+   | - | - | - |
+   | 0 | Número | Digito |
+   | # | Número | Digito, zero à esquerda ausente |
+   | . | Número | Separador decimal |
+   | - | Número | Sinal negativo |
+   | , | Número | Separador de grupo |
+   | E | Número | Separa mantissa e expoente da notação científica |
+   | ; | Separador | Separa os subpadrões positivo e negativo |
+   | % | Prefixo ou sufixo | Multiplica por 100 e exibe como porcentagem |
+   | \u2030 | Prefixo ou sufixo | Multiplica por 1000 e exibe como valor por mil |
+   | \u00A4 | Prefixo ou sufixo | Símbolo local de moeda (se duplicado, mostra símbolo internacional da moeda) |
+   | ' | Prefixo ou sufixo | Delimitador para uso de caractere especial no padrão |
+   
 ```java
 import java.text.DecimalFormat;
 
+//suponha que você queira formatar um número decimal com duas casas decimais e separador de milhar. Para isso, você pode criar um objeto do tipo DecimalFormat e definir o padrão desejado
 public class ExemploFormatador {
 
     public static void main(String[] args) {
