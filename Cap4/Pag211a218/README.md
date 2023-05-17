@@ -58,9 +58,11 @@ Existem vários tipos de formatadores em Java, cada um com uma finalidade espec�
    | ' | Prefixo ou sufixo | Delimitador para uso de caractere especial no padrão |
    
 ```java
-import java.text.DecimalFormat;
+import java.text.DecimalFormat; // para utilizar DecimalFormat
+import java.util.Locale; // para utilizar o Locale.US
 
-//suponha que você queira formatar um número decimal com duas casas decimais e separador de milhar. Para isso, você pode criar um objeto do tipo DecimalFormat e definir o padrão desejado
+// Formata um número decimal usando um objeto do tipo DecimalFormat → linha 72
+// Formata um número decimal usando a classe String.format → linha 77
 public class ExemploFormatador {
 
     public static void main(String[] args) {
@@ -69,11 +71,12 @@ public class ExemploFormatador {
 
         // objeto DecimalFormat com o padrão "#,##0.00", que significa que o número deve ser formatado com separador de milhar e duas casas decimais
         DecimalFormat df = new DecimalFormat("#,##0.00");
-
-        // chamamos o método format() do objeto df, passando o número a ser formatado como parâmetro
-        String numeroFormatado = df.format(numero);
-        
+        String numeroFormatado = df.format(numero); // chamamos o método format() do objeto df, passando o número a ser formatado como parâmetro
         System.out.println(numeroFormatado); // exibe "12.345,68"
+
+        // utilizamos a classe String.format com o padrão "%.2f" e Locale.US para garantir a formatação correta em inglês
+        String numeroFormatado = String.format(Locale.US, "%.2f", numero);
+        System.out.println(numeroFormatado); // exibe "12345.68"
     }
 }
 ```
