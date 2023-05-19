@@ -42,7 +42,7 @@ Existem vários tipos de formatadores em Java, cada um com uma finalidade espec�
  
 ### ***Exemplo simples de como usar formatadores em Java:***
 
- - #### ***Caracteres usador pelo formatador Decimalformat:***
+ - #### ***Caracteres usados pelo formatador Decimal.format:***
    | Caractere | Posição | Significado ou efeito produzido |
    | - | - | - |
    | 0 | Número | Digito |
@@ -57,6 +57,95 @@ Existem vários tipos de formatadores em Java, cada um com uma finalidade espec�
    | \u00A4 | Prefixo ou sufixo | Símbolo local de moeda (se duplicado, mostra símbolo internacional da moeda) |
    | ' | Prefixo ou sufixo | Delimitador para uso de caractere especial no padrão |
    
+ - #### ***Caracteres usados pelo formatador String.format:***
+   |  |  |  |
+   | - | - | - |
+   |  |  |  |
+↓------------------------------------------
+Conversão
+
+Tipo
+
+b, B
+
+h, H
+
+geral
+
+geral
+
+geral
+
+S, S
+
+C, C
+
+caractere
+
+d
+
+inteiro
+
+o
+
+inteiro
+
+X, X
+
+inteiro
+
+Resultado
+
+Se arg é null, resulta false; se boolean, resulta seu valor, senão true.
+
+Produz Integer.toHexString(arg.hashCode()).
+
+Produz arg.toString ou arg formatTo.
+
+Caractere Unicode correspondente.
+
+Inteiro decimal correspondente.
+
+Inteiro octal correspondente.
+
+Inteiro hexadecimal correspondente.
+
+Real decimal em notação científica.
+
+Real decimal com precisão padrão ou indicada.
+
+Real decimal em notação científica computadorizada.
+
+Real hexadecimal correspondente. Produza conversão de data-hora como toString
+
+Produz o próprio literal %.
+
+Resulta na quebra de linha especifica da plataforma.
+
+e, E
+
+f
+
+1. G
+
+ponto-flutuante
+
+ponto-flutuante ponto-flutuante
+
+ponto-flutuante data-hora
+
+a, A
+
+t, T
+
+X
+
+porcentagem
+
+quebra de linha
+↑------------------------------------------
+
+
 ```java
 import java.text.DecimalFormat; // para utilizar DecimalFormat
 import java.util.Locale; // para utilizar o Locale.US
