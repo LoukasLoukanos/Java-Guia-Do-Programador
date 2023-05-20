@@ -8,7 +8,7 @@ Além disso, um registro em Java pode ser desestruturado, o que significa que se
 
 Em resumo, um registro em Java é uma classe simples e concisa que é usada para representar dados imutáveis e é projetada para ser fácil de criar, usar e manipular.
 
-#### ***Exemplo simples de como criar um registro em Java:***
+#### ***Exemplo simples de uso de registro em Java:***
 
 ```java
 public record Pessoa(String nome, int idade) {}
@@ -40,111 +40,7 @@ Existem vários tipos de formatadores em Java, cada um com uma finalidade espec�
  - DateTimeFormatter: introduzido no Java 8, utilizado para formatar datas e horas de acordo com padrões definidos.
  - DecimalStyle: introduzido no Java 8, utilizado para definir as configurações de formatação de números decimais, como separador de milhar e separador decimal.
  
-### ***Exemplo simples de como usar formatadores em Java:***
-
- - #### ***Caracteres usados pelo formatador Decimal.format:***
-   | Caractere | Posição | Significado ou efeito produzido |
-   | - | - | - |
-   | 0 | Número | Digito |
-   | # | Número | Digito, zero à esquerda ausente |
-   | . | Número | Separador decimal |
-   | - | Número | Sinal negativo |
-   | , | Número | Separador de grupo |
-   | E | Número | Separa mantissa e expoente da notação científica |
-   | ; | Separador | Separa os subpadrões positivo e negativo |
-   | % | Prefixo ou sufixo | Multiplica por 100 e exibe como porcentagem |
-   | \u2030 | Prefixo ou sufixo | Multiplica por 1000 e exibe como valor por mil |
-   | \u00A4 | Prefixo ou sufixo | Símbolo local de moeda (se duplicado, mostra símbolo internacional da moeda) |
-   | ' | Prefixo ou sufixo | Delimitador para uso de caractere especial no padrão |
-   
- - #### ***Caracteres usados pelo formatador String.format:***
-   |  |  |  |
-   | - | - | - |
-   |  |  |  |
-↓------------------------------------------
-Conversão
-
-Tipo
-
-b, B
-
-h, H
-
-geral
-
-geral
-
-geral
-
-S, S
-
-C, C
-
-caractere
-
-d
-
-inteiro
-
-o
-
-inteiro
-
-X, X
-
-inteiro
-
-Resultado
-
-Se arg é null, resulta false; se boolean, resulta seu valor, senão true.
-
-Produz Integer.toHexString(arg.hashCode()).
-
-Produz arg.toString ou arg formatTo.
-
-Caractere Unicode correspondente.
-
-Inteiro decimal correspondente.
-
-Inteiro octal correspondente.
-
-Inteiro hexadecimal correspondente.
-
-Real decimal em notação científica.
-
-Real decimal com precisão padrão ou indicada.
-
-Real decimal em notação científica computadorizada.
-
-Real hexadecimal correspondente. Produza conversão de data-hora como toString
-
-Produz o próprio literal %.
-
-Resulta na quebra de linha especifica da plataforma.
-
-e, E
-
-f
-
-1. G
-
-ponto-flutuante
-
-ponto-flutuante ponto-flutuante
-
-ponto-flutuante data-hora
-
-a, A
-
-t, T
-
-X
-
-porcentagem
-
-quebra de linha
-↑------------------------------------------
-
+#### ***Exemplo simples de uso de formatadores em Java:***
 
 ```java
 import java.text.DecimalFormat; // para utilizar DecimalFormat
@@ -169,3 +65,36 @@ public class ExemploFormatador {
     }
 }
 ```
+
+ - #### ***Caracteres usados pelo formatador Decimal.format:***
+   | Caractere | Posição | Significado ou efeito produzido |
+   | - | - | - |
+   | 0 | Número | Digito |
+   | # | Número | Digito, zero à esquerda ausente |
+   | . | Número | Separador decimal |
+   | - | Número | Sinal negativo |
+   | , | Número | Separador de grupo |
+   | E | Número | Separa mantissa e expoente da notação científica |
+   | ; | Separador | Separa os subpadrões positivo e negativo |
+   | % | Prefixo ou sufixo | Multiplica por 100 e exibe como porcentagem |
+   | \u2030 | Prefixo ou sufixo | Multiplica por 1000 e exibe como valor por mil |
+   | \u00A4 | Prefixo ou sufixo | Símbolo local de moeda (se duplicado, mostra símbolo internacional da moeda) |
+   | ' | Prefixo ou sufixo | Delimitador para uso de caractere especial no padrão |
+   
+ - #### ***Caracteres usados pelo formatador String.format:***
+   | Conversão | Tipo | Resultado |
+   | - | - | - |
+   | b, B | geral | Se arg é null, resulta false; se boolean, resulta seu valor, senão true. |
+   | h, H | geral | Produz Integer.toHexString(arg.hashCode()). |
+   | s, S | geral | Produz arg.toString ou arg formatTo. |
+   | c, C | caractere | Caractere Unicode correspondente. |
+   | d | inteiro | Inteiro decimal correspondente. |
+   | o | inteiro | Inteiro octal correspondente. |
+   | x, X | inteiro | Inteiro hexadecimal correspondente. |
+   | e, E | ponto-flutuante | Real decimal em notação científica. |
+   | f | ponto-flutuante | Real decimal com precisão padrão ou indicada. |
+   | g, G | ponto-flutuante | Real decimal em notação científica computadorizada. |
+   | a, A | ponto-flutuante | Real hexadecimal correspondente. |
+   | t, T | data-hora | Produza conversão de data-hora como toString. |
+   | % | porcentagem | Produz o próprio literal %. |
+   | n | quebra de linha | Resulta na quebra de linha especifica da plataforma. |
