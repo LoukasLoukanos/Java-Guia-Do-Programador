@@ -51,6 +51,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 1.6 | Instalando e configurando o Java | Pág. 21 |
     | ➥ 1.7 | Exercícios de revisão | Pág. 22 |
 
+</br>
+
 ### ***➲ Capítulo 2 - Sintaxe Java — Pág. 24***
   - | Capítulo| Conteúdo | Pág./code |
     |:-:|:-:|:-:|
@@ -71,7 +73,9 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 2.15 | Especificadores e modificadores especiais | Pág. 90 <a href="#">→code</a> |
     | ➥ 2.16 | Anotações | Pág. 93 <a href="#">→code</a> |
     | ➥ 2.17 | Exercícios de revisão | Pág. 95 |
-  
+
+</br>
+
 ### ***➲ Capítulo 3 - Orientação a Objetos — Pág. 97***
   - | Capítulo| Conteúdo | Pág./code |
     |:-:|:-:|:-:|
@@ -92,6 +96,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 3.15 | String, StringBuffer e StringBuilder | Pág. 142 <a href="#">→code</a> |
     | ➥ 3.16 | Exercícios de revisão | Pág. 145 |
 
+</br>
+
 ### ***➲ Capítulo 4 - Orientação a Objetos Aplicada — Pág. 147***
   - | Capítulo| Conteúdo | Pág./code |
     |:-:|:-:|:-:|
@@ -110,6 +116,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 4.13 | Formatadores | Pág. 214 <a href="#">→code</a> |
     | ➥ 4.14 | Exercícios de revisão | Pág. 218 |
 
+</br>
+
 ### ***➲ Capítulo 5 - Construção de aplicativos GUI com Swing — Pág. 219***
   - | Capítulo| Conteúdo | Pág./code |
     |:-:|:-:|:-:|
@@ -120,6 +128,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 5.5 | Eventos típicos do Swing | Pág. 241 <a href="#">→code</a> |
     | ➥ 5.6 | Classes auxiliares | Pág. 244 <a href="#">→code</a> |
     | ➥ 5.7 | Exercícios de revisão | Pág. 245 |
+
+</br>
 
 ### ***➲ Capítulo 6 - Aplicação de componentes Swing — Pág. 246***
   - | Capítulo| Conteúdo | Pág./code |
@@ -137,6 +147,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 6.11 | Modelos do Swing | Pág. 300 <a href="#">→code</a> |
     | ➥ 6.12 | Exercícios de revisão | Pág. 303 |
 
+</br>
+
 ### ***➲ Capítulo 7 - Coleções — Pág. 305***
   - | Capítulo| Conteúdo | Pág./code |
     |:-:|:-:|:-:|
@@ -148,6 +160,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 7.6 | Implementações auxiliares | Pág. 363 <a href="#">→code</a> |
     | ➥ 7.7 | Streams para operações em massa | Pág. 367 <a href="#">→code</a> |
     | ➥ 7.8 | Exercícios de revisão | Pág. 385 |
+
+</br>
 
 ### ***➲ Capítulo 8 - Threads — Pág. 387***
   - | Capítulo| Conteúdo | Pág./code |
@@ -162,6 +176,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 8.8 | Modos de operação | Pág. 417 <a href="#">→code</a> |
     | ➥ 8.9 | Exercícios de revisão | Pág. 419 |
 
+</br>
+
 ### ***➲ Capítulo 9 - Streams — Pág. 421***
   - | Capítulo| Conteúdo | Pág./code |
     |:-:|:-:|:-:|
@@ -174,6 +190,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 9.7 | Informações sobre arquivos e diretórios | Pág. 447 <a href="#">→code</a> |
     | ➥ 9.8 | Serialização de objetos | Pág. 453 <a href="#">→code</a> |
     | ➥ 9.9 | Exercícios de revisão | Pág. 458 |
+
+</br>
 
 ### ***➲ Capítulo 10 - JDBC — Pág. 460***
   - | Capítulo| Conteúdo | Pág./code |
@@ -189,6 +207,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ 10.9 | Apresentação de dados em tabelas | Pág. 500 <a href="#">→code</a> |
     | ➥ 10.10|- Exercícios de revisão | Pág. 511 |
 
+</br>
+
 ### ***➲ Apêndice A - Eclipse — Pág. 513***
   - | Capítulo| Conteúdo | Pág./code |
     |:-:|:-:|:-:|
@@ -201,6 +221,8 @@ Todas essas plataformas Java consistem em uma Java Virtual Machine (VM) e uma Ap
     | ➥ A.7 | Edição de código | Pág. 519 |
     | ➥ A.8 | Execução de programas | Pág. 520 |
     | ➥ A.9 | Geração automática de código | Pág. 524 |
+
+</br>
 
 ### ***➲ Apêndice B - Apache Derby — Pág. 527***
   - | Capítulo| Conteúdo | Pág./code |
