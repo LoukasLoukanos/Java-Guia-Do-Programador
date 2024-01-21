@@ -121,7 +121,7 @@ public class MinhaJanela extends JFrame {
     /*[↓ PASSO 5: Programação dos Processadores de Eventos______________________________
      *  Métodos que processarão os eventos capturados pelos ouvintes 
      *  de evento (Event Listeners) declarados no método construtor
-     *_________________________________________________________________________PASSO 5 ↑]
+     *_________________________________________________________________________PASSO 5 ↑]*/
 
 
     //[↓ PASSO 6: Início da Aplicação GUI_______________________________________________
