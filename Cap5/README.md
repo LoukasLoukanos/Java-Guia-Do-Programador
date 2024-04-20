@@ -695,13 +695,10 @@ public class Pag235a237_BorderDemo2 extends JFrame {
 </br>
 
 
-## **Pág. xxx à xxx............Nome | Nome**
+## **Pág. 237 à 245............Modelo de eventos | Eventos típicos do Swing | Classes auxiliares**
 <details>
 <summary></summary>
 
-```java
-//code
-```
+Conteúdo explicativo apenas no livro... (não possui códigos)
 
 </details>
-</br>
